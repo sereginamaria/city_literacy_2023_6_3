@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Городская грамотность</title>
+      <style>
+        .old-browser-dialog {
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background: rgba(0,0,0,.5);
+          position: fixed;
+          z-index: 99999;
+          -webkit-transition: opacity 400ms ease-in;
+          -moz-transition: opacity 400ms ease-in;
+          transition: opacity 400ms ease-in;
+          display: none;
+        }
+
+        .old-browser-dialog-content {
+          margin: auto;
+          background: #fff;
+          border-radius: 12px;
+          min-height: 100px;
+          min-width: 300px;
+          max-width: 800px;
+          max-height: 600px;
+          padding: 20px;
+          position: relative;
+          text-align: center;
+        }
+
+        .download-browser-link {
+          text-align: center;
+          margin: 20px;
+          text-decoration: none;
+        }
+
+        .download-browser-link p{
+          color: #0054a6;
+        }
+      </style>
+  </head>
+  <!--  onclick="fullscreen()" //добавить в боди-->
+  <body onclick="fullscreen()" id="body">
+
+    <div id="openModal" class="old-browser-dialog">
+      <div class="old-browser-dialog-content">
+        <h2>Ваша версия браузера устарела!</h2>
+        <p>Обновите браузер до последней версии для правильной работы приложения.</p>
+        <div style="display: flex;">
+            <div style="display: flex;">
+              <a href="https://www.google.ru/chrome/" target="_blank" class="download-browser-link">
+                <img src="img/iconBrowserChrome.png" alt="">
+                <p style="width: max-content">Google Chrome</p>
+                <span>
+                  <p>Скачать</p>
+                </span>
+              </a>
+            </div>
+            <div style="display: flex;">
+              <a href="https://browser.yandex.ru/?from=link_updater___&banerid=0435000000" target="_blank" class="download-browser-link">
+                <img src="img/iconBrowserYandex.png" alt="">
+                <p>Яндекс.Браузер</p>
+                <div>
+                  <p>Скачать</p>
+                </div>
+              </a>
+            </div>
+            <div style="display: flex;">
+              <a href="https://www.opera.com/ru" target="_blank" class="download-browser-link">
+                <img src="img/iconBrowserOpera.png" alt="">
+                <p>Opera</p>
+                <div>
+                  <p>Скачать</p>
+                </div>
+              </a>
+            </div>
+            <div style="display: flex;">
+              <a href="https://www.mozilla.org/ru/firefox/new/" target="_blank" class="download-browser-link">
+                <img src="img/iconBrowserFirefox.png" alt="">
+                <p>Mozilla Firefox</p>
+                <div>
+                  <p>Скачать</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="app"></div>
+
+    <script>
+      "use strict";
+
+      navigator.sayswho= (function(){
+        var ua= navigator.userAgent;
+        var tem;
+        var M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+        if(/trident/i.test(M[1])){
+          tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+          return 'IE '+(tem[1] || '');
+        }
+        if(M[1]=== 'Chrome'){
+          tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+          if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+        }
+        M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+        if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+        return M;
+      })();
+
+      if(typeof navigator.sayswho === 'string'){
+        if((navigator.sayswho.split(' ')[0] === "Opera" && navigator.sayswho.split(' ')[1] <= 90) ||
+                (navigator.sayswho.split(' ')[0] === "trident") || (navigator.sayswho.split(' ')[0] === "msie")){
+          document.getElementById('openModal').style.removeProperty('display')
+          document.getElementById('openModal').style.display = 'flex'
+        }
+      }
+      if(typeof navigator.sayswho === 'object'){
+        if((navigator.sayswho[0] === "Chrome" && navigator.sayswho[1] <= 106) ||
+                (navigator.sayswho[0] === "Firefox" && navigator.sayswho[1] <= 106) ||
+                (navigator.sayswho[0] === "Safari" && navigator.sayswho[1] <= 5) ||
+                (navigator.sayswho[0] === "trident") || (navigator.sayswho[0] === "msie")){
+          document.getElementById('openModal').style.removeProperty('display')
+          document.getElementById('openModal').style.display = 'flex'
+        }
+      }
+
+      function fullscreen() {
+        var elem = document.getElementById("body");
+        elem.requestFullscreen();
+      }
+    </script>
+  </body>
+</html>
