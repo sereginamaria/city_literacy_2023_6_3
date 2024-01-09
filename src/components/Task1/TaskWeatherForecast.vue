@@ -18,7 +18,7 @@
                             <draggable
                                 @add="error(1)"
                                 class="list-group list-group-el-weather-forecast"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskWeatherForecast_1"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast_1"
                                 group="task15"
                             >
                                 <template #item="{ element }">
@@ -36,7 +36,7 @@
                             <draggable
                                 @add="error(2)"
                                 class="list-group list-group-el-weather-forecast"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskWeatherForecast_2"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast_2"
                                 group="task15"
                             >
                                 <template #item="{ element }">
@@ -54,7 +54,7 @@
                             <draggable
                                 @add="error(3)"
                                 class="list-group list-group-el-weather-forecast"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskWeatherForecast_3"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast_3"
                                 group="task15"
                             >
                                 <template #item="{ element }">
@@ -72,7 +72,7 @@
                             <draggable
                                 @add="error(4)"
                                 class="list-group list-group-el-weather-forecast"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskWeatherForecast_4"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast_4"
                                 group="task15"
                             >
                                 <template #item="{ element }">
@@ -85,7 +85,7 @@
                     </div>
                     <draggable
                         class="list-group list-of-answers-weather-forecast d-flex flex-row justify-content-between align-items-center"
-                        :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskWeatherForecast"
+                        :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast"
                         group="task15"
                     >
                         <template #item="{ element }">
@@ -99,12 +99,12 @@
         <div class="background-text" id="background-text" style="background: none; justify-content: end;">
             <div class="d-flex">
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_1 !== 'NA' || mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_2 !== 'NA'
-            || mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_3 !== 'NA' || mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_4 !== 'NA'"
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_2 !== 'NA'
+            || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_3 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_4 !== 'NA'"
             >Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
@@ -122,7 +122,7 @@
         },
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         data() {
             return {
@@ -135,26 +135,26 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             error(id) {
-                if(this.mainJSON.taskLibraryNight["listOfAnswersTaskWeatherForecast_" + id].length > 1){
-                    this.mainJSON.taskLibraryNight.listOfAnswersTaskWeatherForecast.push(this.mainJSON.taskLibraryNight["listOfAnswersTaskWeatherForecast_" + id][1])
-                    this.mainJSON.taskLibraryNight["listOfAnswersTaskWeatherForecast_" + id].splice(1, 1)
+                if(this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id].length > 1){
+                    this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast.push(this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id][1])
+                    this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id].splice(1, 1)
                 }
-                this.mainJSON.taskLibraryNight.results['ULSCLL2_Log_LLK6_' + id] = this.mainJSON.taskLibraryNight["listOfAnswersTaskWeatherForecast_" + id][0].id
+                this.mainJSON.taskScienceFestival.results['ULSCLL2_Log_LLK6_' + id] = this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id][0].id
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskLibraryNight.shownScreenID++
-                this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                this.mainJSON.taskScienceFestival.shownScreenID++
+                this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                         el.isShow = true
                     }
                 })
-                if((this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_1 === 1 || this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_1 === 3) &&
-                    (this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_3 === 1 || this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK6_3 === 3)) {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK6_1 = 1
+                if((this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 === 3) &&
+                    (this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_3 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_3 === 3)) {
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK6_1 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK6_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK6_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

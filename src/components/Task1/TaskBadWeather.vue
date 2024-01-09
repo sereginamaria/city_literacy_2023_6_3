@@ -1,6 +1,6 @@
 <template>
-    <div class="backgroundTaskLibraryNight backimp" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" :class="{background5: mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 === 1,
-    background6: mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 === 2, background7: mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 === 3, background8: mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 === 4}"
+    <div class="backgroundTaskLibraryNight backimp" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" :class="{background5: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 1,
+    background6: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 2, background7: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 3, background8: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 4}"
     >
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Кате? Где можно спрятаться от непогоды? Выбери один ответ.
@@ -9,8 +9,8 @@
         <div class="d-flex justify-content-center align-items-center w-100 flex-column"
              :style="'height: calc(100% - ' + this.height + 'px)'">
             <div class="task13">
-                <div v-for="el in mainJSON.taskLibraryNight.listOfAnswersTaskBadWeather" :key="el.id" class="task13El"
-                     :class="{choosenAnswer1: el.id === mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1}"
+                <div v-for="el in mainJSON.taskScienceFestival.listOfAnswersTaskBadWeather" :key="el.id" class="task13El"
+                     :class="{choosenAnswer1: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1}"
                      @click="chooseAnswer(el)">
                     <div>
                         {{el.name}}
@@ -21,11 +21,11 @@
         <div class="background-text" id="background-text">
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -43,7 +43,7 @@
         },
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -51,21 +51,21 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el) {
-                this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 = el.id
+                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 = el.id
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskLibraryNight.shownScreenID++
-                this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                this.mainJSON.taskScienceFestival.shownScreenID++
+                this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK3_1 === 4){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_SCK3_1 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 4){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK3_1 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_SCK3_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK3_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

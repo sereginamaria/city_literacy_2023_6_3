@@ -5,8 +5,8 @@
         <div v-if="screen.id === 4 || screen.id === 10 || screen.id === 14 || screen.id === 24 || screen.id === 27 || screen.id === 45 || screen.id === 48">
             <div class="background-text-center">
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <div class="background-text" id="background-text" style="background: none; justify-content: end;">
@@ -17,8 +17,8 @@
         <div class="background-text" id="background-text" v-else>
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="nextTask(screen)" style="height: 40px">Далее</MyButton>
@@ -39,7 +39,7 @@
         name: "TextScreen",
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         data() {
             return {
@@ -96,7 +96,7 @@
                         this.mainJSON.forms['isShow'] = true
                         this.mainJSON["instructionShow"] = true
                         this.mainJSON["mainPageShow"] = false
-                        this.mainJSON.taskLibraryNight["isShow"] = false
+                        this.mainJSON.taskScienceFestival["isShow"] = false
                     }
                     else {
                         let randomElement = this.listOfNotDoneTasks[Math.floor(Math.random()*this.listOfNotDoneTasks.length)]
@@ -104,7 +104,7 @@
                         this.mainJSON["instructionShow"] = true
                         this.mainJSON["mainPageShow"] = false
                         this.listOfNotDoneTasks = []
-                        this.mainJSON.taskLibraryNight["isShow"] = false
+                        this.mainJSON.taskScienceFestival["isShow"] = false
                     }
                 }
                 let t = new Date()
@@ -134,17 +134,17 @@
                 else {
                     screen.isShow = false
                     if(screen.id !== 30 || screen.id !== 38 || screen.id !== 40) {
-                        this.mainJSON.taskLibraryNight.shownScreenID++
+                        this.mainJSON.taskScienceFestival.shownScreenID++
                     }
                     if(screen.id === 30){
-                        this.mainJSON.taskLibraryNight.shownScreenID = 32
+                        this.mainJSON.taskScienceFestival.shownScreenID = 32
                     }
                     if(screen.id === 38 || screen.id === 40){
-                        this.mainJSON.taskLibraryNight.shownScreenID = 42
+                        this.mainJSON.taskScienceFestival.shownScreenID = 42
                     }
 
-                    this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                        if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                    this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                        if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                             el.isShow = true
                         }
                     })

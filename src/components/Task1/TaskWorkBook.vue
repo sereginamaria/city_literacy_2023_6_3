@@ -9,8 +9,8 @@
             <div style="line-height: 3; text-align: justify; font-size: 18px" id="collapseModularTask4">
                 Считается, что Москва появилась в
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ1" aria-expanded="false" aria-controls="collapseWorkBookQ1"
-                      @click="openWorkBookQ(14)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_1 === 'NA'}"
-                >{{this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_1 !== "NA" ? mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_1 : "_______"}}</span>
+                      @click="openWorkBookQ(14)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_1 === 'NA'}"
+                >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_1 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_1 : "_______"}}</span>
                 <div class="collapse" id="collapseWorkBookQ1" style="position: absolute" data-bs-parent="#collapseModularTask4">
                     <div class="card card-body">
                         <p>
@@ -23,8 +23,8 @@
                 </div>
                 году. Город был основан
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ2" aria-expanded="false" aria-controls="collapseWorkBookQ2"
-                      @click="openWorkBookQ(15)" style="text-decoration: underline; font-size: 18px; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_2 === 'NA'}"
-                >{{this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_2 !== "NA" ? mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_2 : "_______"}}</span>.
+                      @click="openWorkBookQ(15)" style="text-decoration: underline; font-size: 18px; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_2 === 'NA'}"
+                >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_2 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_2 : "_______"}}</span>.
                 <div class="collapse" id="collapseWorkBookQ2" style="position: absolute" data-bs-parent="#collapseModularTask4">
                     <div class="card card-body">
                         <p>
@@ -37,8 +37,8 @@
                 </div>
                 Главной торговой площадью средневековой Москвы была
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ3" aria-expanded="false" aria-controls="collapseWorkBookQ3"
-                      @click="openWorkBookQ(16)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_3 === 'NA'}"
-                >{{this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_3 !== "NA" ? mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_3 : "_______"}}</span>.
+                      @click="openWorkBookQ(16)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_3 === 'NA'}"
+                >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_3 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_3 : "_______"}}</span>.
                 <div class="collapse" id="collapseWorkBookQ3" style="position: absolute" data-bs-parent="#collapseModularTask4">
                     <div class="card card-body">
                         <p>
@@ -51,8 +51,8 @@
                 </div>
                 В наши дни рядом с этой площадью находится памятник
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ4" aria-expanded="false" aria-controls="collapseWorkBookQ4"
-                      @click="openWorkBookQ(17)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_4 === 'NA'}"
-                >{{this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_4 !== "NA" ? mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_4 : "_______"}}</span>.
+                      @click="openWorkBookQ(17)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 === 'NA'}"
+                >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 : "_______"}}</span>.
                 <div class="collapse" id="collapseWorkBookQ4" style="position: absolute" data-bs-parent="#collapseModularTask4">
                     <div class="card card-body">
                         <p>
@@ -67,8 +67,8 @@
         </div>
 
         <!--Первый вопрос-->
-        <div class="background-task2" v-if="mainJSON.taskLibraryNight.modularTask1_14Show">
-            <div v-for="el in constTaskLibraryNight.listOfAnswersTaskWorkBook1" :key="el.id">
+        <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_14Show">
+            <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook1" :key="el.id">
                 <div class="d-flex mt-2" @click="chooseWorkBookEl(1, 14, el)"
                      data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ1" aria-expanded="false" aria-controls="collapseWorkBookQ1"
                 >
@@ -82,8 +82,8 @@
         </div>
 
         <!--Второй вопрос-->
-        <div class="background-task2" v-if="mainJSON.taskLibraryNight.modularTask1_15Show">
-            <div v-for="el in constTaskLibraryNight.listOfAnswersTaskWorkBook2" :key="el.id">
+        <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_15Show">
+            <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook2" :key="el.id">
                 <div class="d-flex mt-2 align-items-center" @click="chooseWorkBookEl(2, 15, el)"
                      data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ2" aria-expanded="false" aria-controls="collapseWorkBookQ2"
                 >
@@ -98,8 +98,8 @@
         </div>
 
         <!--Третий вопрос-->
-        <div class="background-task2" v-if="mainJSON.taskLibraryNight.modularTask1_16Show">
-            <div v-for="el in constTaskLibraryNight.listOfAnswersTaskWorkBook3" :key="el.id">
+        <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_16Show">
+            <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook3" :key="el.id">
                 <div class="d-flex mt-2 align-items-center" @click="chooseWorkBookEl(3, 16, el)"
                      data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ3" aria-expanded="false" aria-controls="collapseWorkBookQ3"
                 >
@@ -114,10 +114,10 @@
         </div>
 
         <!--Четвертый вопрос-->
-        <div class="background-task2" v-if="mainJSON.taskLibraryNight.modularTask1_17Show">
+        <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_17Show">
             <img src="../../assets/Workbook8.webp" alt="" style="width: 90%">
             <div style="background: #fff; border: 1px solid #54bedf;" class="mt-2">
-                <div v-for="el in constTaskLibraryNight.listOfAnswersTaskWorkBook4" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_4}"
+                <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook4" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_4}"
                      class="option-answers-border"
                 >
                     <div @click="chooseAnswer(el)"
@@ -131,8 +131,8 @@
 
         <div class="background-text justify-content-end" style="background: none; justify-content: end;">
             <MyButton class="white-buttons" @click="checkAnswer"
-                      v-if="mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_1 !== 'NA' || mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_2 !== 'NA'
-                      || mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_3 !== 'NA' || mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_4 !== 'NA'"
+                      v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_1 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_2 !== 'NA'
+                      || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_3 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_4 !== 'NA'"
             >
                 Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
@@ -148,7 +148,7 @@
         name: "TaskWorkBook",
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -156,87 +156,87 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el){
-                this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_4 = el.id
-                this.mainJSON.taskLibraryNight.ULSCLL2_Log_LLK1_4 = el.value
-                this.mainJSON.taskLibraryNight.modularTask1_17Show = false
+                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_4 = el.id
+                this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 = el.value
+                this.mainJSON.taskScienceFestival.modularTask1_17Show = false
             },
             chooseWorkBookEl(workBookID, id, el){
-                this.mainJSON.taskLibraryNight.results["ULSCLL2_Log_LLK1_" + workBookID] = el.id
+                this.mainJSON.taskScienceFestival.results["ULSCLL2_Log_LLK1_" + workBookID] = el.id
 
                 if(workBookID === 1){
                     if(el.value === 'В 1280 году'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = '1280'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = '1280'
                     }
                     if(el.value === 'В 1105 году'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = '1105'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = '1105'
                     }
                     if(el.value === 'В 1147 году'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = '1147'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = '1147'
                     }
                     if(el.value === 'В 1127 году'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = '1127'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = '1127'
                     }
                 }
                 if(workBookID === 2){
                     if(el.value === 'Царь Иван Грозный'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = 'Царем Иваном Грозным'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = 'Царем Иваном Грозным'
                     }
                     if(el.value === 'Князь Юрий Долгорукий'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = 'Князем Юрием Долгоруким'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = 'Князем Юрием Долгоруким'
                     }
                     if(el.value === 'Боярин Борис Годунов'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = 'Боярином Борисом Годуновым'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = 'Боярином Борисом Годуновым'
                     }
                     if(el.value === 'Князь Ярослав Мудрый'){
-                        this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = 'Князем Ярославом Мудрым'
+                        this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = 'Князем Ярославом Мудрым'
                     }
                 }
                 if(workBookID === 3 || workBookID === 4){
-                    this.mainJSON.taskLibraryNight["ULSCLL2_Log_LLK1_" + workBookID] = el.value
+                    this.mainJSON.taskScienceFestival["ULSCLL2_Log_LLK1_" + workBookID] = el.value
                 }
-                this.mainJSON.taskLibraryNight["modularTask1_" + id + "Show"] = false
+                this.mainJSON.taskScienceFestival["modularTask1_" + id + "Show"] = false
             },
             openWorkBookQ(id){
                 let k = 15
                 while (k !== 18){
                     if(k !== id){
-                        this.mainJSON.taskLibraryNight["modularTask1_" + k + "Show"] = false
+                        this.mainJSON.taskScienceFestival["modularTask1_" + k + "Show"] = false
                     }
                     k++
                 }
-                this.mainJSON.taskLibraryNight["modularTask1_" + id + "Show"] = !this.mainJSON.taskLibraryNight["modularTask1_" + id + "Show"]
+                this.mainJSON.taskScienceFestival["modularTask1_" + id + "Show"] = !this.mainJSON.taskScienceFestival["modularTask1_" + id + "Show"]
             },
             checkAnswer(){
                 screen.isShow = false
-                this.mainJSON.taskLibraryNight.shownScreenID++
-                this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                this.mainJSON.taskScienceFestival.shownScreenID++
+                this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_1 ===  3){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_1 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_1 ===  3){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_1 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_1 = 0
                 }
-                if(this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_2 ===  2){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_2 = 1
-                }
-                else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_2 = 0
-                }
-                if(this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_3 ===  2){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_3 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_2 ===  2){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_2 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_3 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_2 = 0
                 }
-                if(this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK1_4 ===  3){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_4 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_3 ===  2){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_3 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK1_4 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_3 = 0
+                }
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_4 ===  3){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_4 = 1
+                }
+                else {
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK1_4 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

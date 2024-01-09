@@ -15,7 +15,7 @@
                             <draggable
                                 @add="error(1)"
                                 class="list-group task10"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_1"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1"
                                 group="task10"
                             >
                                 <template #item="{ element }">
@@ -30,7 +30,7 @@
                             <draggable
                                 @add="error(2)"
                                 class="list-group task10"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_2"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2"
                                 group="task10"
                             >
                                 <template #item="{ element }">
@@ -45,7 +45,7 @@
                             <draggable
                                 @add="error(3)"
                                 class="list-group task10"
-                                :list="this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_3"
+                                :list="this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3"
                                 group="task10"
                             >
                                 <template #item="{ element }">
@@ -58,7 +58,7 @@
                     </div>
                     <draggable
                         class="list-group d-flex list-of-answers-attractions"
-                        :list="this.mainJSON.taskLibraryNight.listOfElementsTaskAttractions"
+                        :list="this.mainJSON.taskScienceFestival.listOfElementsTaskAttractions"
                         group="task10"
                     >
                         <template #item="{ element }">
@@ -72,11 +72,11 @@
         <div class="background-text" id="background-text">
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK2_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK2_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -90,7 +90,7 @@
         name: "TaskAttractions",
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         data() {
             return {
@@ -106,30 +106,30 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             error(id) {
-                if(this.mainJSON.taskLibraryNight["listOfAnswersTaskAttractions_" + id].length > 1){
-                    this.mainJSON.taskLibraryNight.listOfElementsTaskAttractions.push(this.mainJSON.taskLibraryNight["listOfAnswersTaskAttractions_" + id][1])
-                    this.mainJSON.taskLibraryNight["listOfAnswersTaskAttractions_" + id].splice(1, 1)
+                if(this.mainJSON.taskScienceFestival["listOfAnswersTaskAttractions_" + id].length > 1){
+                    this.mainJSON.taskScienceFestival.listOfElementsTaskAttractions.push(this.mainJSON.taskScienceFestival["listOfAnswersTaskAttractions_" + id][1])
+                    this.mainJSON.taskScienceFestival["listOfAnswersTaskAttractions_" + id].splice(1, 1)
                 }
-                if(this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_1.length !== 0 && this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_2.length !== 0 &&
-                    this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_3.length !== 0){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK2_1 =  "Слот 1: " + this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_1[0].value + ", Слот 2: " +
-                        this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_2[0].value + ", Слот 3: " + this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_3[0].value
+                if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1.length !== 0 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2.length !== 0 &&
+                    this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3.length !== 0){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK2_1 =  "Слот 1: " + this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].value + ", Слот 2: " +
+                        this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].value + ", Слот 3: " + this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3[0].value
                 }
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskLibraryNight.shownScreenID++
-                this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                this.mainJSON.taskScienceFestival.shownScreenID++
+                this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_1[0].id === 6 && this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_2[0].id === 5 &&
-                    this.mainJSON.taskLibraryNight.listOfAnswersTaskAttractions_3[0].id === 2){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK2_1 = 1
+                if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].id === 6 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].id === 5 &&
+                    this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3[0].id === 2){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK2_1 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK2_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK2_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

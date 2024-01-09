@@ -1,10 +1,10 @@
 <template>
-    <div class="instruction-body" :class="{backgroundTaskLibraryNight: mainJSON.taskLibraryNight.isShow, backgroundTaskChatWinterHolidays: mainJSON.taskChatWinterHolidays.isShow ||
+    <div class="instruction-body" :class="{backgroundTaskLibraryNight: mainJSON.taskScienceFestival.isShow, backgroundTaskChatWinterHolidays: mainJSON.taskChatWinterHolidays.isShow ||
     mainJSON.forms.isShow, backgroundTaskCleaningDay: mainJSON.taskCleaningDay.isShow}">
         <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
             <div class="instruction-card">
                 <div>
-                    <p v-if="mainJSON.taskLibraryNight.isShow">{{constTaskLibraryNight.instruction}}</p>
+                    <p v-if="mainJSON.taskScienceFestival.isShow">{{constScienceFestival.instruction}}</p>
                     <p v-if="mainJSON.taskChatWinterHolidays.isShow">{{constTaskChatWinterHolidays.instruction}}</p>
                     <p v-if="mainJSON.taskCleaningDay.isShow">{{constTaskCleaningDay.instruction}}</p>
                     <p v-if="mainJSON.forms.isShow">{{constForm.instruction}}</p>
@@ -33,7 +33,7 @@
     export default {
         name: "InstructionPage",
         computed: {
-            ...mapGetters(['mainJSON', 'constTaskLibraryNight', 'constTaskChatWinterHolidays', 'constTaskCleaningDay', 'constForm']),
+            ...mapGetters(['mainJSON', 'constScienceFestival', 'constTaskChatWinterHolidays', 'constTaskCleaningDay', 'constForm']),
         },
         methods: {
             ...mapMutations(["push_mainJSON"]),

@@ -5,7 +5,7 @@
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in mainJSON.taskLibraryNight.listOfAnswersTaskSites" :key="el.id" :class="{choosenAnswer: el.choose}"
+            <div v-for="el in mainJSON.taskScienceFestival.listOfAnswersTaskSites" :key="el.id" :class="{choosenAnswer: el.choose}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -18,11 +18,11 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK5 !== 'NA' && mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK5 !== ''">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 !== 'NA' && mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 !== ''">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -35,7 +35,7 @@
         name: "TaskSites",
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -44,41 +44,41 @@
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el) {
                 let k = 0
-                this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.forEach(elMass => {
+                this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.forEach(elMass => {
                     if(elMass === el.id){
-                        this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.splice(this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.indexOf(elMass), 1)
+                        this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.splice(this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.indexOf(elMass), 1)
                         el.choose = false
                         k++
                     }
                 })
                 if(k === 0){
-                    this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.push(el.id)
+                    this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.push(el.id)
                     el.choose = true
                 }
-                this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK5 = this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.join()
+                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 = this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.join()
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskLibraryNight.shownScreenID++
-                this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                this.mainJSON.taskScienceFestival.shownScreenID++
+                this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                         el.isShow = true
                     }
                 })
                 let maxScore = 0
-                this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.forEach(el => {
+                this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.forEach(el => {
                     if(el === 1 || el === 3){
                         maxScore++
                     }
                 })
-                if(this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.length === 2 && maxScore === 2){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK5 = 2
+                if(this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.length === 2 && maxScore === 2){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK5 = 2
                 }
-                else if(this.mainJSON.taskLibraryNight.listOfChoosenAnswersTaskSites.length === 1 && maxScore === 1){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK5 = 1
+                else if(this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.length === 1 && maxScore === 1){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK5 = 1
                 }
                 else {
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK5 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK5 = 0
                 }
                 
                 let t = new Date()

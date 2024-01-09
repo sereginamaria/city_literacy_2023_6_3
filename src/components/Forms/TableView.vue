@@ -130,7 +130,7 @@ export default {
 
             this.mainJSON.taskCleaningDay["isShow"] = false
             this.mainJSON.taskChatWinterHolidays["isShow"] = false
-            this.mainJSON.taskLibraryNight["isShow"] = false
+            this.mainJSON.taskScienceFestival["isShow"] = false
             this.mainJSON.forms["isShow"] = false
             // this.mainJSON['feedbackShow'] = true
             this.mainJSON['resultsShow'] = true

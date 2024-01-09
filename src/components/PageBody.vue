@@ -1,7 +1,7 @@
 <template>
     <div>
        <!-- <PageNavBar/>-->
-        <ModelTaskLibraryNight v-if="this.mainJSON.taskLibraryNight.isShow"/>
+        <ModelTaskLibraryNight v-if="this.mainJSON.taskScienceFestival.isShow"/>
         <ModelTaskChatWinterHolidays v-if="this.mainJSON.taskChatWinterHolidays.isShow"/>
         <ModelTaskCleaningDay v-if="this.mainJSON.taskCleaningDay.isShow"/>
         <ModelForms v-if="this.mainJSON.forms.isShow"/>

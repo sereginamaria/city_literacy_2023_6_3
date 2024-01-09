@@ -109,7 +109,7 @@
                 if(status){
                     this.mainJSON.taskCleaningDay["isShow"] = false
                     this.mainJSON.taskChatWinterHolidays["isShow"] = false
-                    this.mainJSON.taskLibraryNight["isShow"] = false
+                    this.mainJSON.taskScienceFestival["isShow"] = false
                     this.mainJSON.forms["isShow"] = false
                     this.mainJSON['loginShow'] = true
                     this.mainJSON['mainPageShow'] = false

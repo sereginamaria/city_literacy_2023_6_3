@@ -11,7 +11,7 @@
              :style="'height: calc(100% - ' + this.height + 'px)'">
             <draggable
                 class="list-group draggable-backpack-end"
-                :list="this.mainJSON.taskLibraryNight.listOfElementsEnd"
+                :list="this.mainJSON.taskScienceFestival.listOfElementsEnd"
                 group="draggingThings"
             >
                 <template #item="{ element }">
@@ -23,7 +23,7 @@
                 <img src="../../assets/LittleBackpackOpen.png" alt="" class="little-backpack">
                 <draggable
                     class="list-group draggable-backpack-start"
-                    :list="this.mainJSON.taskLibraryNight.listOfElementsStart"
+                    :list="this.mainJSON.taskScienceFestival.listOfElementsStart"
                     group="draggingThings"
                 >
                     <template #item="{ element }">
@@ -36,11 +36,11 @@
         <div class="background-text" id="background-text">
              <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskLibraryNight.listOfElementsEnd.length !== 0">Готово</MyButton>
+            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskScienceFestival.listOfElementsEnd.length !== 0">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -62,7 +62,7 @@
         name: "TaskMovingThingsFromBag",
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         data() {
             return {
@@ -80,9 +80,9 @@
             draggable
         },
         computed: {
-            ...mapGetters(['mainJSON', 'constTaskLibraryNight']),
+            ...mapGetters(['mainJSON', 'constScienceFestival']),
             screenID(){
-                return this.mainJSON.taskLibraryNight.shownScreenID
+                return this.mainJSON.taskScienceFestival.shownScreenID
             }
         },
         methods: {
@@ -107,9 +107,9 @@
 
                 if(status){
                     screen.isShow = false
-                    this.mainJSON.taskLibraryNight.shownScreenID++
-                    this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                        if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                    this.mainJSON.taskScienceFestival.shownScreenID++
+                    this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                        if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                             el.isShow = true
                         }
                     })
@@ -117,7 +117,7 @@
                     let answers = []
                     let maxScore = 0
                     let middleScore = 0
-                    this.mainJSON.taskLibraryNight.listOfElementsEnd.forEach(el => {
+                    this.mainJSON.taskScienceFestival.listOfElementsEnd.forEach(el => {
                         answers.push(el.id)
                         if(el.id === 2 || el.id === 7){
                             maxScore++
@@ -126,15 +126,15 @@
                             middleScore++
                         }
                     })
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_SCK1_2 = answers.join()
-                    if(this.mainJSON.taskLibraryNight.listOfElementsEnd.length === 2 && maxScore === 2){
-                        this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_SCK1_2 = 2
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_2 = answers.join()
+                    if(this.mainJSON.taskScienceFestival.listOfElementsEnd.length === 2 && maxScore === 2){
+                        this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_2 = 2
                     }
-                    else if(this.mainJSON.taskLibraryNight.listOfElementsEnd.length === 2 && maxScore === 1 && middleScore === 1){
-                        this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_SCK1_2 = 1
+                    else if(this.mainJSON.taskScienceFestival.listOfElementsEnd.length === 2 && maxScore === 1 && middleScore === 1){
+                        this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_2 = 1
                     }
                     else {
-                        this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_SCK1_2 = 0
+                        this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_2 = 0
                     }
 
                     let t = new Date()

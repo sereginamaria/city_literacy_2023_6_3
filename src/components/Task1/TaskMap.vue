@@ -6,7 +6,7 @@
             </p>
         </div>
         <div>
-            <div v-for="el in mainJSON.taskLibraryNight.listOfElementsTask9" :key="el.id">
+            <div v-for="el in mainJSON.taskScienceFestival.listOfElementsTask9" :key="el.id">
                 <img :src=" require('../../assets/' + el.src) " :class="{choose: el.choose}" @click="addAnswer(el)"
                      alt="Avatar" :style="el.style"/>
             </div>
@@ -16,11 +16,11 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].name}}</span>
-                    {{constTaskLibraryNight.screens[this.mainJSON.taskLibraryNight.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK3_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK3_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -39,7 +39,7 @@
         name: "TaskMap",
         props: {
             screen: {},
-            constTaskLibraryNight: {}
+            constScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -64,7 +64,7 @@
             addAnswer(el){
                 if (el.choose !== null) {
                     el.choose = !el.choose
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK3_1 = this.mainJSON.taskLibraryNight.listOfAnswersTask9.join()
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK3_1 = this.mainJSON.taskScienceFestival.listOfAnswersTask9.join()
                 }
 
             },
@@ -72,36 +72,36 @@
                 this.modalVisible = false
 
                 if (status) {
-                    this.mainJSON.taskLibraryNight.listOfElementsTask9.forEach( el => {
+                    this.mainJSON.taskScienceFestival.listOfElementsTask9.forEach( el => {
                         if(el.choose === true){
-                            this.mainJSON.taskLibraryNight.listOfAnswersTask9.push(el.name)
+                            this.mainJSON.taskScienceFestival.listOfAnswersTask9.push(el.name)
                         }
                     })
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Log_LLK3_1 = this.mainJSON.taskLibraryNight.listOfAnswersTask9.join()
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK3_1 = this.mainJSON.taskScienceFestival.listOfAnswersTask9.join()
 
                     screen.isShow = false
-                    this.mainJSON.taskLibraryNight.shownScreenID++
-                    this.mainJSON.taskLibraryNight.screens.forEach(el => {
-                        if (el.id === this.mainJSON.taskLibraryNight.shownScreenID) {
+                    this.mainJSON.taskScienceFestival.shownScreenID++
+                    this.mainJSON.taskScienceFestival.screens.forEach(el => {
+                        if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                             el.isShow = true
                         }
                     })
                 }
 
                 let maxScore = 0
-                this.mainJSON.taskLibraryNight.listOfAnswersTask9.forEach( el => {
+                this.mainJSON.taskScienceFestival.listOfAnswersTask9.forEach( el => {
                     if(el === "Река Дон" || el === "Парк 'Приокский'"){
                         maxScore++
                     }
                 })
-                if(this.mainJSON.taskLibraryNight.listOfAnswersTask9.length === 2 && maxScore === 2){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK3_1 = 2
+                if(this.mainJSON.taskScienceFestival.listOfAnswersTask9.length === 2 && maxScore === 2){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK3_1 = 2
                 }
-                else if(this.mainJSON.taskLibraryNight.listOfAnswersTask9.length === 2 && maxScore === 1){
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK3_1 = 1
+                else if(this.mainJSON.taskScienceFestival.listOfAnswersTask9.length === 2 && maxScore === 1){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK3_1 = 1
                 }
                 else{
-                    this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_LLK3_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK3_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

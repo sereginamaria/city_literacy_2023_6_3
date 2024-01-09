@@ -65,8 +65,8 @@
 
                 if(status){
                     this.change = 0
-                    if(this.mainJSON.taskLibraryNight.isShow && this.change === 0){
-                        this.mainJSON.taskLibraryNight["isShow"] = false
+                    if(this.mainJSON.taskScienceFestival.isShow && this.change === 0){
+                        this.mainJSON.taskScienceFestival["isShow"] = false
                         this.nextTask('taskLibraryNight')
                     }
                     if(this.mainJSON.taskChatWinterHolidays.isShow  && this.change === 0){
@@ -83,7 +83,7 @@
                 if (status === 'end'){
                     this.mainJSON.taskCleaningDay["isShow"] = false
                     this.mainJSON.taskChatWinterHolidays["isShow"] = false
-                    this.mainJSON.taskLibraryNight["isShow"] = false
+                    this.mainJSON.taskScienceFestival["isShow"] = false
                     this.mainJSON.forms["isShow"] = false
                     // this.mainJSON['feedbackShow'] = true
                     this.mainJSON['resultsShow'] = true

@@ -2,7 +2,7 @@ import Vuex from 'vuex'
 import axios from "axios";
 
 import date from "./date"
-import constTaskLibraryNight from "./constTaskLibraryNight"
+import constScienceFestival from "./constScienceFestival"
 import constTaskChatWinterHolidays from "@/store/constTaskChatWinterHolidays";
 import constTaskCleaningDay from "@/store/constTaskCleaningDay";
 import constForm from "@/store/constForm";
@@ -11,7 +11,7 @@ import constForm from "@/store/constForm";
 export default new Vuex.Store({
     state: {
         mainJSON: {},
-        constTaskLibraryNight: {},
+        constScienceFestival: {},
         constTaskChatWinterHolidays: {},
         constTaskCleaningDay: {},
         constForm: {},
@@ -21,7 +21,7 @@ export default new Vuex.Store({
         get_mainJSON({commit}){
             if (!localStorage.login && !localStorage.hash) {
                 commit('first_set_mainJSON', date.date)
-                commit('set_constTaskLibraryNight', constTaskLibraryNight.constTaskLibraryNight)
+                commit('set_constScienceFestival', constScienceFestival.constScienceFestival)
                 commit('set_constTaskChatWinterHolidays', constTaskChatWinterHolidays.constTaskChatWinterHolidays)
                 commit('set_constTaskCleaningDay', constTaskCleaningDay.constTaskCleaningDay)
                 commit('set_constForm', constForm.constForm)
@@ -34,7 +34,7 @@ export default new Vuex.Store({
                     .then(function (response) {
                         if (response.data.status === "ok") {
                             commit('set_mainJSON', JSON.parse(response.data.json))
-                            commit('set_constTaskLibraryNight', constTaskLibraryNight.constTaskLibraryNight)
+                            commit('set_constScienceFestival', constScienceFestival.constScienceFestival)
                             commit('set_constTaskChatWinterHolidays', constTaskChatWinterHolidays.constTaskChatWinterHolidays)
                             commit('set_constTaskCleaningDay', constTaskCleaningDay.constTaskCleaningDay)
                             commit('set_constForm', constForm.constForm)
@@ -43,7 +43,7 @@ export default new Vuex.Store({
                             localStorage.clear()
                             window.location.reload();
                             commit('set_mainJSON', date.date)
-                            commit('set_constTaskLibraryNight', constTaskLibraryNight.constTaskLibraryNight)
+                            commit('set_constScienceFestival', constScienceFestival.constScienceFestival)
                             commit('set_constTaskChatWinterHolidays', constTaskChatWinterHolidays.constTaskChatWinterHolidays)
                             commit('set_constTaskCleaningDay', constTaskCleaningDay.constTaskCleaningDay)
                             commit('set_constForm', constForm.constForm)
@@ -64,8 +64,8 @@ export default new Vuex.Store({
         set_mainJSON: (state, el) => {
             state.mainJSON = el
         },
-        set_constTaskLibraryNight: (state, el) => {
-            state.constTaskLibraryNight = el
+        set_constScienceFestival: (state, el) => {
+            state.constScienceFestival = el
         },
         set_constTaskChatWinterHolidays: (state, el) => {
             state.constTaskChatWinterHolidays = el
@@ -148,8 +148,8 @@ export default new Vuex.Store({
         mainJSON(state){
             return state.mainJSON;
         },
-        constTaskLibraryNight(state){
-            return state.constTaskLibraryNight;
+        constScienceFestival(state){
+            return state.constScienceFestival;
         },
         constTaskChatWinterHolidays(state){
             return state.constTaskChatWinterHolidays;
