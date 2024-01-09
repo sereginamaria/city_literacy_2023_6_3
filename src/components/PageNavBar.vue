@@ -107,7 +107,7 @@
 
                 this.modalVisible = false
                 if(status){
-                    this.mainJSON.taskNewGirl["isShow"] = false
+                    this.mainJSON.taskCleaningDay["isShow"] = false
                     this.mainJSON.taskChatWinterHolidays["isShow"] = false
                     this.mainJSON.taskLibraryNight["isShow"] = false
                     this.mainJSON.forms["isShow"] = false

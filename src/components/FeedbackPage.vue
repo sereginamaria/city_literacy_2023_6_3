@@ -75,7 +75,7 @@ export default {
                 ('0' + d.getSeconds()).slice(-2)
             ].join(':');
 
-            this.mainJSON.taskNewGirl["isShow"] = false
+            this.mainJSON.taskCleaningDay["isShow"] = false
             this.mainJSON.taskChatWinterHolidays["isShow"] = false
             this.mainJSON.taskLibraryNight["isShow"] = false
 
@@ -89,7 +89,7 @@ export default {
         }
     },
     mounted(){
-        console.log('feedback')
+       /* console.log('feedback')*/
         if(this.mainJSON.taskLibraryNight.results.ULSCLL2_Score_SCK1_2 === 1){
             this.securityInTheCity++
         }
@@ -230,73 +230,73 @@ export default {
         }
 
 
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK4_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK4_2 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_2 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_1 === 2){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_1 === 2){
             this.prosocialEngagement+=2
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score1_SEK2_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK2_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK2_2 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK2_2 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score1_SEK1_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK1_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score2_SEK1_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score2_SEK1_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score3_SEK1_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score3_SEK1_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score1_SEK5_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK5_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score2_SEK5_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score2_SEK5_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK6_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK6_1 === 2){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 === 2){
             this.prosocialEngagement+=2
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES2 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES2 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES4 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES4 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES5 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES5 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_3 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_3 === 2){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 === 2){
             this.prosocialEngagement+=2
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES5_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES5_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskNewGirl.results.ULSE2_Score_SES1_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES1_1 === 1){
             this.prosocialEngagement++
         }
 

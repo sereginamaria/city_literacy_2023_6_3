@@ -1,13 +1,13 @@
 <template>
-    <div class="backgroundTaskNewGirl"
+    <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Отметь в таблице, какая информация о волонтерстве верная, а какая – нет.
+            <p>Отметь в таблице какая информация верная, а какая–нет.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyNewGirl background-task-card-about-volunteering">
+            <div class="backgroundTaskBodyCleaningDay background-task-card-about-volunteering">
                 <table class="table">
                     <thead>
                     <tr>
@@ -18,17 +18,17 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Волонтерство помогает найти единомышленников.</td>
+                        <td>Стать волонтером в 14 лет можно без разрешения родителей.</td>
                         <td> <input class="form-check-input mt-0" type="radio" name="task-card-about-volunteering-1" @click="addAnswer(1)"></td>
                         <td> <input class="form-check-input mt-0" type="radio" name="task-card-about-volunteering-1" @click="addAnswer(2)"></td>
                     </tr>
                     <tr>
-                        <td>Достижения волонтера в жизни города фиксируется в его трудовой книжке.</td>
+                        <td>Волонтерство помогает расширить кругозор и посетить новые места.</td>
                         <td> <input class="form-check-input mt-0" type="radio" name="task-card-about-volunteering-2" @click="addAnswer(3)"></td>
                         <td> <input class="form-check-input mt-0" type="radio" name="task-card-about-volunteering-2" @click="addAnswer(4)"></td>
                     </tr>
                     <tr>
-                        <td>Стать волонтером до 14 лет можно только с разрешения родителей.</td>
+                        <td>Волонтерский паспорт — документ, где фиксируются все достижения волонтера в общественной жизни города.</td>
                         <td> <input class="form-check-input mt-0" type="radio" name="task-card-about-volunteering-3" @click="addAnswer(5)"></td>
                         <td> <input class="form-check-input mt-0" type="radio" name="task-card-about-volunteering-3" @click="addAnswer(6)"></td>
                     </tr>
@@ -41,11 +41,11 @@
         <div class="background-text" id="background-text">
         <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].name}}</span>
-                    {{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].name}}</span>
+                    {{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_4 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_4 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -58,7 +58,7 @@
         name: "TaskCardAboutVolunteering",
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -79,20 +79,20 @@
             addAnswer(id) {
                 if(id === 1 || id === 2){
                     if (id === 1){
-                        this.rightAnswer1 = 1
+                        this.rightAnswer1 = 0
                     }
                     if (id === 2){
-                        this.rightAnswer1 = 0
+                        this.rightAnswer1 = 1
                     }
                     this.list1 = []
                     this.list1.push(id)
                 }
                 if(id === 3 || id === 4){
                     if (id === 3){
-                        this.rightAnswer2 = 0
+                        this.rightAnswer2 = 1
                     }
                     if (id === 4){
-                        this.rightAnswer2 = 1
+                        this.rightAnswer2 = 0
                     }
                     this.list2 = []
                     this.list2.push(id)
@@ -109,19 +109,19 @@
                 }
 
                 let answer = this.list1.concat(this.list2).concat(this.list3)
-                this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_4 = answer.join()
+                this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_4 = answer.join()
                 if(this.rightAnswer1 === 1 && this.rightAnswer2 === 1 && this.rightAnswer3 === 1) {
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK4_2 = 1
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_2 = 1
                 }
-                else this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK4_2 = 0
+                else this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_2 = 0
             },
             checkAnswer() {
                 this.modalVisible = false
 
                     screen.isShow = false
-                    this.mainJSON.taskNewGirl.shownScreenID++
-                    this.mainJSON.taskNewGirl.screens.forEach(el => {
-                        if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                    this.mainJSON.taskCleaningDay.shownScreenID++
+                    this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                        if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                             el.isShow = true
                         }
                     })

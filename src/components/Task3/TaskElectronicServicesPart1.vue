@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskNewGirl"
+    <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block" v-if="!this.showModalDialog">
             <p>
@@ -9,22 +9,22 @@
         </div>
         <div class="d-flex justify-content-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyNewGirl taskElectronicServicesPart1" style="position: relative">
+            <div class="backgroundTaskBodyCleaningDay taskElectronicServicesPart1" style="position: relative">
 
-                    <!--                <img src="../../assets/TaskNewGirlElectronicServicesMap.webp" alt="" style="width: 80%">-->
-                    <img src="../../assets/TaskNewGirlElectronicServicesIconNoise.png" alt="" @click="openModalDialog('Noise')" style="width: 10%;
+                    <!--                <img src="../../assets/TaskCleaningDayElectronicServicesMap.webp" alt="" style="width: 80%">-->
+                    <img src="../../assets/TaskCleaningDayElectronicServicesIconNoise.png" alt="" @click="openModalDialog('Noise')" style="width: 10%;
     position: absolute;
     top: 52%;
     left: 18%;">
-                    <img src="../../assets/TaskNewGirlElectronicServicesIconHomelessPerson.png" alt="" @click="openModalDialog('HomelessPerson')" style="    width: 10%;
+                    <img src="../../assets/TaskCleaningDayElectronicServicesIconHomelessPerson.png" alt="" @click="openModalDialog('HomelessPerson')" style="    width: 10%;
     position: absolute;
     top: 42%;
     left: 33%;">
-                    <img src="../../assets/TaskNewGirlElectronicServicesIconPollution.png" alt="" @click="openModalDialog('Pollution')" style="width: 10%;
+                    <img src="../../assets/TaskCleaningDayElectronicServicesIconPollution.png" alt="" @click="openModalDialog('Pollution')" style="width: 10%;
     position: absolute;
     top: 70%;
     left: 55%;">
-                    <img src="../../assets/TaskNewGirlElectronicServicesIconCat.png" alt="" @click="openModalDialog('Cat')" style="    width: 10%;
+                    <img src="../../assets/TaskCleaningDayElectronicServicesIconCat.png" alt="" @click="openModalDialog('Cat')" style="    width: 10%;
     position: absolute;
     top: 5%;
     left: 70%;">
@@ -94,7 +94,7 @@
         },
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -111,8 +111,8 @@
                     {value: "Нет", status: false}
                 ]
                 if (type === 'Noise'){
-                    this.imgSrc = 'TaskNewGirlElectronicServicesIconModalNoise'
-                    this.message = 'В 20:00, когда я готовлю домашнюю работу, мой сосед делает ремонт и громко сверлит'
+                    this.imgSrc = 'TaskCleaningDayElectronicServicesIconModalNoise'
+                    this.message = 'Днем, когда школьники делают уроки, соседская собака сверху гавкает и мешает'
                     for(const [key, value] of Object.entries(this.answers)){
                         if(key === 'answerNoise' && value === true){
                             this.yesButtonTrue = true
@@ -125,8 +125,8 @@
                     }
                 }
                 if (type === 'HomelessPerson'){
-                    this.imgSrc = 'TaskNewGirlElectronicServicesIconModalHomelessPerson'
-                    this.message = 'Пожилые горожане не умеют пользоваться компьютером и интернетом'
+                    this.imgSrc = 'TaskCleaningDayElectronicServicesIconModalHomelessPerson'
+                    this.message = 'Утром сложно добираться в школу из-за пробок на дорогах'
                     for(const [key, value] of Object.entries(this.answers)){
                         if(key === 'answerHomelessPerson' && value === true){
                             this.yesButtonTrue = true
@@ -139,8 +139,8 @@
                     }
                 }
                 if (type === 'Pollution'){
-                    this.imgSrc = 'TaskNewGirlElectronicServicesIconModalPollution'
-                    this.message = 'В пруд на окраине города регулярно выливают жидкость с резким химическим запахом'
+                    this.imgSrc = 'TaskCleaningDayElectronicServicesIconModalPollution'
+                    this.message = 'В озеро на окраине города регулярно выбрасывают промышленные отходы'
                     for(const [key, value] of Object.entries(this.answers)){
                         if(key === 'answerPollution' && value === true){
                             this.yesButtonTrue = true
@@ -153,8 +153,8 @@
                     }
                 }
                 if (type === 'Cat'){
-                    this.imgSrc = 'TaskNewGirlElectronicServicesIconModalCat'
-                    this.message = 'Найден маленький щенок с ошейником'
+                    this.imgSrc = 'TaskCleaningDayElectronicServicesIconModalCat'
+                    this.message = 'На дерево залез кот и не может спуститься'
                     for(const [key, value] of Object.entries(this.answers)){
                         if(key === 'answerCat' && value === true){
                             this.yesButtonTrue = true
@@ -184,9 +184,9 @@
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskNewGirl.shownScreenID++
-                this.mainJSON.taskNewGirl.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                this.mainJSON.taskCleaningDay.shownScreenID++
+                this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                         el.isShow = true
                     }
                 })
@@ -194,10 +194,10 @@
                 let ans = []
                 let results = 0
 
-                console.log(this.answers.answerHomelessPerson)
+             /*   console.log(this.answers.answerHomelessPerson)
                 console.log(this.answers.answerCat)
                 console.log(this.answers.answerPollution)
-                console.log(this.answers.answerNoise)
+                console.log(this.answers.answerNoise)*/
 
                 if(this.answers.answerHomelessPerson){
                     ans.push(1)
@@ -243,14 +243,14 @@
                     ans.push("NA")
                 }
 
-                this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK6_1 = ans.join()
+                this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK6_1 = ans.join()
                 if(results === 4){
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK6_1 = 2
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 = 2
                 }
                 else if(results === 3 || results === 2){
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK6_1 = 1
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 = 1
                 }
-                else this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK6_1 = 0
+                else this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 = 0
 
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =
@@ -285,7 +285,7 @@
         border-color: green;
     }
     .taskElectronicServicesPart1 {
-        background: url("../../assets/TaskNewGirlElectronicServicesMap.webp") no-repeat;
+        background: url("../../assets/TaskCleaningDayElectronicServicesMap.webp") no-repeat;
         height: 100%;
         width: 100%;
         background-size: contain;

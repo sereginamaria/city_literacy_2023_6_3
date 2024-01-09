@@ -1,38 +1,33 @@
 <template>
-    <div class="backgroundTaskNewGirl"
+    <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Заполни пропуски, выбирая слова, которые больше всего подходят.
+            <p>Заполни пропуски, выбирая подходящие по смыслу слова.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyNewGirl h-50" style="width: 70%">
-                <p style="font-size: 20px">Волонтер — это человек, который осуществляет
-                    <MySelect :list="constTaskNewGirl.listOfAnswersTaskWhoIsAVolunteer1" :listID="1" @answer="addAnswer"
-                              :selected="this.mainJSON.taskNewGirl.ULSE2_Log_SEK4_1" style="font-size: 20px"></MySelect>
-                    деятельность
-                    <MySelect :list="constTaskNewGirl.listOfAnswersTaskWhoIsAVolunteer2" :listID="2" @answer="addAnswer"
-                              :selected="this.mainJSON.taskNewGirl.ULSE2_Log_SEK4_2" style="font-size: 20px"></MySelect>
-                    <MySelect :list="constTaskNewGirl.listOfAnswersTaskWhoIsAVolunteer3" :listID="3" @answer="addAnswer"
-                              :selected="this.mainJSON.taskNewGirl.ULSE2_Log_SEK4_3" style="font-size: 20px"></MySelect>.
+            <div class="backgroundTaskBodyCleaningDay h-50" style="width: 70%">
+                <p style="font-size: 20px; color: white">Волонтер — это человек, который выполняет какую-либо полезную общественную работу на благо общества
+                    <MySelect :list="constTaskCleaningDay.listOfAnswersTaskWhoIsAVolunteer1" :listID="1" @answer="addAnswer"
+                              :selected="this.mainJSON.taskCleaningDay.ULSE3_Log_SEK4_1" style="font-size: 20px"></MySelect>
+                    , делает это
+                    <MySelect :list="constTaskCleaningDay.listOfAnswersTaskWhoIsAVolunteer2" :listID="2" @answer="addAnswer"
+                              :selected="this.mainJSON.taskCleaningDay.ULSE3_Log_SEK4_2" style="font-size: 20px"></MySelect>
+                    и
+                    <MySelect :list="constTaskCleaningDay.listOfAnswersTaskWhoIsAVolunteer3" :listID="3" @answer="addAnswer"
+                              :selected="this.mainJSON.taskCleaningDay.ULSE3_Log_SEK4_3" style="font-size: 20px"></MySelect>.
                 </p>
             </div>
         </div>
 
 
         <div class="background-text" id="background-text" style="background: none; justify-content: end;">
-            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_1 !== 'NA' ||
-            mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_2 !== 'NA' || mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_3 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_1 !== 'NA' ||
+            mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_2 !== 'NA' || mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_3 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
-
-    <MyModal v-model:show="modalVisible" v-model:buttons="modalButtons"
-             @update="checkAnswer"
-    >
-        {{this.modalMessage}}
-    </MyModal>
 
 </template>
 
@@ -43,13 +38,10 @@
         name: "TaskWhoIsAVolunteer",
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         data() {
             return {
-                modalVisible: false,
-                modalButtons: [],
-                modalMessage: '',
                 height: 0
             }
         },
@@ -58,35 +50,25 @@
         },
         methods: {
             ...mapMutations(["push_mainJSON"]),
-            showModal(){
-                this.modalVisible = true
-                this.modalButtons = [
-                    {value: "Да", status: true},
-                    {value: "Нет", status: false}
-                ]
-                this.modalMessage = 'Ты действительно хочешь закончить выполнение этого задания? После этого уже нельзя будет изменить ответы.'
-            },
             addAnswer(el, listID) {
-                this.mainJSON.taskNewGirl["ULSE2_Log_SEK4_" + listID] = el
-                this.mainJSON.taskNewGirl.results["ULSE2_Log_SEK4_" + listID] = el
+                this.mainJSON.taskCleaningDay["ULSE3_Log_SEK4_" + listID] = el
+                this.mainJSON.taskCleaningDay.results["ULSE3_Log_SEK4_" + listID] = el
             },
-            checkAnswer(status) {
-                this.modalVisible = false
+            checkAnswer() {
 
-                if(status) {
                     screen.isShow = false
-                    this.mainJSON.taskNewGirl.shownScreenID++
-                    this.mainJSON.taskNewGirl.screens.forEach(el => {
-                        if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                    this.mainJSON.taskCleaningDay.shownScreenID++
+                    this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                        if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                             el.isShow = true
                         }
                     })
-                    if(this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_1 === 'добровольную' &&
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_2 === 'на благо общества' &&
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK4_3 === 'без получения денежного вознаграждения') {
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK4_1 = 1
+                    if(this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_1 === 'безвозмездно' &&
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_2 === 'в свободное время' &&
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK4_3 === 'по собственному желанию') {
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_1 = 1
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK4_1 = 0
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_1 = 0
                     let t = new Date()
                     this.mainJSON.results.dataTimeLastUpdate =
                         [
@@ -103,7 +85,7 @@
                         push: this.mainJSON
                     })
                 }
-            }
+
         },
         mounted(){
             this.height = document.getElementById('background-text').offsetHeight + document.getElementById('instruction-block').offsetHeight

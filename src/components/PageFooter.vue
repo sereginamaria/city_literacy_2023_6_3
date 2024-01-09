@@ -74,14 +74,14 @@
                         this.mainJSON.taskChatWinterHolidays["isShow"] = false
                         this.nextTask('taskChatWinterHolidays')
                     }
-                    if(this.mainJSON.taskNewGirl.isShow  && this.change === 0){
-                        this.mainJSON.taskNewGirl["isShow"] = false
-                        this.nextTask('taskNewGirl')
+                    if(this.mainJSON.taskCleaningDay.isShow  && this.change === 0){
+                        this.mainJSON.taskCleaningDay["isShow"] = false
+                        this.nextTask('taskCleaningDay')
                     }
                 }
 
                 if (status === 'end'){
-                    this.mainJSON.taskNewGirl["isShow"] = false
+                    this.mainJSON.taskCleaningDay["isShow"] = false
                     this.mainJSON.taskChatWinterHolidays["isShow"] = false
                     this.mainJSON.taskLibraryNight["isShow"] = false
                     this.mainJSON.forms["isShow"] = false
@@ -361,69 +361,6 @@
                     else this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS1_2 = 0
 
                 }
-
-                this.mainJSON.listOfTasks.forEach( el => {
-                    if(el.name === 'taskChatWinterHolidays'){
-                        el.done = true
-                        let t = new Date()
-                        this.mainJSON.results.dataTimeLastUpdate = this.mainJSON.results.dataTimeEndtaskChatWinterHolidays =
-                            [
-                                t.getFullYear(),
-                                ('0' + (t.getMonth() + 1)).slice(-2),
-                                ('0' + t.getDate()).slice(-2)
-                            ].join('-') + ' ' + [
-                                ('0' + (t.getHours())).slice(-2),
-                                ('0' + (t.getMinutes())).slice(-2),
-                                ('0' + t.getSeconds()).slice(-2)
-                            ].join(':');
-                        this.push_mainJSON({
-                            push: this.mainJSON
-                        })
-                    }
-                    if(el.done === false){
-                        this.listOfNotDoneTasks.push(el.name)
-                    }
-                })
-                if(this.listOfNotDoneTasks.length === 0){
-                    let t = new Date()
-                    this.mainJSON.results.dataTimeLastUpdate = this.mainJSON.results.dataTimeEnd =
-                        [
-                            t.getFullYear(),
-                            ('0' + (t.getMonth() + 1)).slice(-2),
-                            ('0' + t.getDate()).slice(-2)
-                        ].join('-') + ' ' + [
-                            ('0' + (t.getHours())).slice(-2),
-                            ('0' + (t.getMinutes())).slice(-2),
-                            ('0' + t.getSeconds()).slice(-2)
-                        ].join(':');
-                    this.mainJSON.forms['isShow'] = true
-                    this.mainJSON["instructionShow"] = true
-                    this.mainJSON["mainPageShow"] = false
-                    this.mainJSON.taskChatWinterHolidays["isShow"] = false
-                }
-                else {
-                    let randomElement = this.listOfNotDoneTasks[Math.floor(Math.random()*this.listOfNotDoneTasks.length)]
-                    this.mainJSON[randomElement].isShow = true
-                    this.mainJSON["instructionShow"] = true
-                    this.mainJSON["mainPageShow"] = false
-                    this.listOfNotDoneTasks = []
-                    this.mainJSON.taskChatWinterHolidays["isShow"] = false
-                }
-                let t = new Date()
-                this.mainJSON.results.dataTimeLastUpdate =
-                    [
-                        t.getFullYear(),
-                        ('0' + (t.getMonth() + 1)).slice(-2),
-                        ('0' + t.getDate()).slice(-2)
-                    ].join('-') + ' ' + [
-                        ('0' + (t.getHours())).slice(-2),
-                        ('0' + (t.getMinutes())).slice(-2),
-                        ('0' + t.getSeconds()).slice(-2)
-                    ].join(':');
-
-                this.push_mainJSON({
-                    push: this.mainJSON
-                })
             },
         }
     }

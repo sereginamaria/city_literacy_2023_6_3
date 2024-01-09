@@ -1,14 +1,14 @@
 <template>
-    <div class="backgroundTaskNewGirl"
+    <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Подскажи Кате, как называют активных жителей города, которые по своей инициативе помогают ухаживать за историческими памятниками. Выбери один вариант ответа.
+            <p>Ответь на вопрос классного руководителя. Выбери один вариант ответа.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
             <div class="option-answers-background">
-                <div v-for="el in constTaskNewGirl.listOfAnswersCulturalVolunteers" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskNewGirl.results.ULSE2_Log_SEK2_2}"
+                <div v-for="el in constTaskCleaningDay.listOfAnswersCulturalVolunteers" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskCleaningDay.results.ULSE3_Log_SEK2_2}"
                      class="option-answers-border"
                 >
                     <div @click="chooseAnswer(el)">
@@ -20,11 +20,11 @@
         <div class="background-text" id="background-text">
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].name}}</span>
-                    {{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].name}}</span>
+                    {{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskNewGirl.results.ULSE2_Log_SEK2_2 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskCleaningDay.results.ULSE3_Log_SEK2_2 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -37,7 +37,7 @@
         name: "TaskCulturalVolunteers",
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         data() {
             return {
@@ -50,22 +50,21 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el){
-                this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK2_2 = el.id
+                this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK2_2 = el.id
             },
             checkAnswer() {
                 screen.isShow = false
+                this.mainJSON.taskCleaningDay.shownScreenID++
 
-                if(this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK2_2 === 4){
-                    this.mainJSON.taskNewGirl.shownScreenID++
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK2_2 = 1
+                if(this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK2_2 === 4){
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK2_2 = 1
                 }
                 else{
-                    this.mainJSON.taskNewGirl.shownScreenID+=2
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK2_2 = 0
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK2_2 = 0
                 }
 
-                this.mainJSON.taskNewGirl.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                         el.isShow = true
                     }
                 })

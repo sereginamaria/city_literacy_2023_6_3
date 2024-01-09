@@ -1,5 +1,5 @@
 <template>
-    <div class="background backgroundTaskNewGirl d-flex align-items-center flex-column" style="backdrop-filter: blur(5px);"
+    <div class="background backgroundTaskCleaningDay d-flex align-items-center flex-column" style="backdrop-filter: blur(5px);"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Выбери контейнер, куда выбросить пауэрбанк.
@@ -10,11 +10,11 @@
             <div class="backgroundTaskSortingGarbage">
                 <div class="d-flex w-100 justify-content-center" style="height: 70%">
                     <div class="position-relative d-flex justify-content-center" style="width: 16%">
-                        <img src="../../assets/TaskNewGirlSortingGarbagePlastic.png" alt="" class="little-backpack">
+                        <img src="../../assets/TaskCleaningDaySortingGarbagePlastic.png" alt="" class="little-backpack">
                         <draggable
 
                             class="list-group list-group-el-sorting-garbage position-relative"
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list1"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1"
                             group="listOfAnswersSocialInstitutions"
                         >
                             <template #item="{ element }">
@@ -24,11 +24,11 @@
                         </draggable>
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="width: 16%">
-                        <img src="../../assets/TaskNewGirlSortingGarbagePaper.png" alt="" class="little-backpack">
+                        <img src="../../assets/TaskCleaningDaySortingGarbagePaper.png" alt="" class="little-backpack">
                         <draggable
 
                             class="list-group list-group-el-sorting-garbage position-relative"
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list2"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2"
                             group="listOfAnswersSocialInstitutions"
                         >
                             <template #item="{ element }">
@@ -38,11 +38,11 @@
                         </draggable>
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="width: 16%">
-                        <img src="../../assets/TaskNewGirlSortingGarbageGlass.png" alt="" class="little-backpack">
+                        <img src="../../assets/TaskCleaningDaySortingGarbageGlass.png" alt="" class="little-backpack">
                         <draggable
 
                             class="list-group list-group-el-sorting-garbage position-relative"
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list3"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3"
                             group="listOfAnswersSocialInstitutions"
                         >
                             <template #item="{ element }">
@@ -52,11 +52,11 @@
                         </draggable>
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="width: 16%">
-                        <img src="../../assets/TaskNewGirlSortingGarbageMetal.png" alt="" class="little-backpack">
+                        <img src="../../assets/TaskCleaningDaySortingGarbageMetal.png" alt="" class="little-backpack">
                         <draggable
 
                             class="list-group list-group-el-sorting-garbage position-relative"
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list4"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4"
                             group="listOfAnswersSocialInstitutions"
                         >
                             <template #item="{ element }">
@@ -66,11 +66,11 @@
                         </draggable>
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="width: 16%">
-                        <img src="../../assets/TaskNewGirlSortingGarbageFoodWaste.png" alt="" class="little-backpack">
+                        <img src="../../assets/TaskCleaningDaySortingGarbageFoodWaste.png" alt="" class="little-backpack">
                         <draggable
 
                             class="list-group list-group-el-sorting-garbage position-relative"
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list5"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list5"
                             group="listOfAnswersSocialInstitutions"
                         >
                             <template #item="{ element }">
@@ -80,11 +80,11 @@
                         </draggable>
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="width: 16%">
-                        <img src="../../assets/TaskNewGirlSortingGarbageHazardousWaste.png" alt="" class="little-backpack">
+                        <img src="../../assets/TaskCleaningDaySortingGarbageHazardousWaste.png" alt="" class="little-backpack">
                         <draggable
 
                             class="list-group list-group-el-sorting-garbage position-relative "
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list6"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list6"
                             group="listOfAnswersSocialInstitutions"
                         >
                             <template #item="{ element }">
@@ -96,7 +96,7 @@
                 </div>
                 <draggable
                     class="list-group d-flex justify-content-center align-items-center flex-row"
-                    :list="this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage"
+                    :list="this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage"
                     group="listOfAnswersSocialInstitutions" style="width: 100%; height: 15%"
                 >
                     <template #item="{ element }">
@@ -111,15 +111,15 @@
         <div class="background-text" id="background-text">
             <div class="d-flex" style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].name}}</span>
-                    {{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].name}}</span>
+                    {{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list1.length !== 0 ||
-            mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list2.length !== 0 || mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list3.length !== 0 ||
-            mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list4.length !== 0  ||
-            mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list5.length !== 0 ||
-            mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list6.length !== 0">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.length !== 0 ||
+            mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.length !== 0 || mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.length !== 0 ||
+            mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.length !== 0  ||
+            mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list5.length !== 0 ||
+            mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list6.length !== 0">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -133,10 +133,10 @@
     import draggable from "vuedraggable";
 
     export default {
-        name: "TaskSortingGarbageLightBulb",
+        name: "TaskSortingGarbageBattery",
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         data() {
             return {
@@ -148,7 +148,7 @@
                 nextTask: false,
                 listOfAnswersSortingGarbage: [
                     {
-                        "src": "TaskNewGirlSortingGarbageLightBulb",
+                        "src": "TaskCleaningDaySortingGarbageBattery",
                         "id": 6,
                         "style": "width: calc(100%/4); position: absolute; bottom: calc(100%/30); left: calc(100%/1.34)",
                         "toolTip": "Перегоревшая энергосберегающая лампочка"
@@ -172,86 +172,86 @@
                 this.toolTipMessage = message
             },
             addAnswer(el, listID) {
-                this.mainJSON.taskNewGirl["ULSE2_Log_SEK4_" + listID] = el.value
-                this.mainJSON.taskNewGirl.results["ULSE2_Log_SEK4_" + listID] = el.id
+                this.mainJSON.taskCleaningDay["ULSE3_Log_SEK4_" + listID] = el.value
+                this.mainJSON.taskCleaningDay.results["ULSE3_Log_SEK4_" + listID] = el.id
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskNewGirl.shownScreenID++
-                this.mainJSON.taskNewGirl.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                this.mainJSON.taskCleaningDay.shownScreenID++
+                this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                         el.isShow = true
                     }
                 })
 
-                if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list1.length !== 0){
-                    if( this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_1 !== "NA"){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_1 =  this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_1.toString() +
-                            this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list1[0].id.toString()
+                if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.length !== 0){
+                    if( this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_1 !== "NA"){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_1 =  this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_1.toString() +
+                            this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1[0].id.toString()
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_1 = this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list1[0].id
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_1 = this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1[0].id
 
-                    if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list1[0].id === 6){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 0
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1[0].id === 6){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 0
                     }
                 }
-                if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list2.length !== 0){
-                    if( this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_2 !== "NA"){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_2 =  this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_2.toString() +
-                            this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list2[0].id.toString()
+                if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.length !== 0){
+                    if( this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_2 !== "NA"){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_2 =  this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_2.toString() +
+                            this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2[0].id.toString()
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_2 = this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list2[0].id
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_2 = this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2[0].id
 
-                    if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list2[0].id === 6){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 0
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2[0].id === 6){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 0
                     }
                 }
-                if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list3.length !== 0){
-                    if( this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_3 !== "NA"){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_3 =  this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_3.toString() +
-                            this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list3[0].id.toString()
+                if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.length !== 0){
+                    if( this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_3 !== "NA"){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_3 =  this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_3.toString() +
+                            this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3[0].id.toString()
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_3 = this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list3[0].id
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_3 = this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3[0].id
 
-                    if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list3[0].id === 6){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 0
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3[0].id === 6){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 0
                     }
                 }
-                if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list4.length !== 0){
-                    if( this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_4 !== "NA"){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_4 =  this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_4.toString() +
-                            this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list4[0].id.toString()
+                if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.length !== 0){
+                    if( this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_4 !== "NA"){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_4 =  this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_4.toString() +
+                            this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4[0].id.toString()
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_4 = this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list4[0].id
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_4 = this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4[0].id
 
-                    if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list4[0].id === 6){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 0
-                    }
-                }
-
-                if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list5.length !== 0){
-                    if( this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_5 !== "NA"){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_5 =  this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_5.toString() +
-                            this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list5[0].id.toString()
-                    }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Log_SES2_5 = this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list5[0].id
-
-                    if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list5[0].id === 6){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 0
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4[0].id === 6){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 0
                     }
                 }
 
-                if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list6.length !== 0){
-                    if( this.mainJSON.taskNewGirl.results.ULSE2_Log_SES3 !== "NA"){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Log_SES3 =  this.mainJSON.taskNewGirl.results.ULSE2_Log_SES3.toString() +
-                            this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list6[0].id.toString()
+                if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list5.length !== 0){
+                    if( this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_5 !== "NA"){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_5 =  this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_5.toString() +
+                            this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list5[0].id.toString()
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Log_SES3 = this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list6[0].id
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES2_5 = this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list5[0].id
 
-                    if(this.mainJSON.taskNewGirl.listOfAnswersSortingGarbage_list6[0].id === 6){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 1
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list5[0].id === 6){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 0
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Score_SES3 = 0
+                }
+
+                if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list6.length !== 0){
+                    if( this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES3 !== "NA"){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES3 =  this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES3.toString() +
+                            this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list6[0].id.toString()
+                    }
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Log_SES3 = this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list6[0].id
+
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list6[0].id === 6){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 1
+                    }
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 = 0
                 }
 
                 let t = new Date()

@@ -1,14 +1,13 @@
 <template>
-    <div class="backgroundTaskNewGirl"
+    <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Сопоставь в презентации проявления проблем с их последствиями. Перетащи фразы внизу в нужные ячейки на схеме.
+            <p>Сопоставь проблемы крупных городов с их последствиями. Перетащи фразы из нижней части магнитной доски в нужные ячейки на схеме.
             </p>
         </div>
         <div class="d-flex justify-content-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyNewGirl" style="border: unset">
-                <p style="font-size: 24px;color: #EE5959;font-weight: bold;">Городские проблемы и их последствия</p>
+            <div class="backgroundTaskBodyCleaningDay" style="border: unset">
                 <div style="border: 2px solid #54BEDF">
                     <table class="table">
                         <thead>
@@ -19,12 +18,12 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Загрязнение воздуха</td>
+                            <td>Загрязнение почвы</td>
                             <td>
                                 <draggable
                                         @add="error(1)"
                                         class="list-group list-group-el"
-                                        :list="this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list1"
+                                        :list="this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list1"
                                         group="listOfAnswersUrbanProblems"
                                 >
                                     <template #item="{ element }">
@@ -41,7 +40,7 @@
                                 <draggable
                                         @add="error(2)"
                                         class="list-group list-group-el"
-                                        :list="this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list2"
+                                        :list="this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list2"
                                         group="listOfAnswersUrbanProblems"
                                 >
                                     <template #item="{ element }">
@@ -53,12 +52,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Рост количества мусорных полигонов</td>
+                            <td>Сокращение “зеленых” зон в городе</td>
                             <td>
                                 <draggable
                                         @add="error(3)"
                                         class="list-group list-group-el"
-                                        :list="this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list3"
+                                        :list="this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list3"
                                         group="listOfAnswersUrbanProblems"
                                 >
                                     <template #item="{ element }">
@@ -73,7 +72,7 @@
                     </table>
                     <draggable
                             class="list-group d-flex flex-row flex-wrap justify-content-center align-items-center"
-                            :list="this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems"
+                            :list="this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems"
                             group="listOfAnswersUrbanProblems" style="background: #EDFFF6;"
                     >
                         <template #item="{ element }">
@@ -89,8 +88,8 @@
 
 
         <div class="background-text" id="background-text" style="background: none; justify-content: end;">
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list1.length !== 0 ||
-            mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list2.length !== 0 || mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list3.length !== 0">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list1.length !== 0 ||
+            mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list2.length !== 0 || mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list3.length !== 0">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -104,7 +103,7 @@
         name: "TaskUrbanProblems",
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         data() {
             return {
@@ -120,41 +119,41 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             error(id) {
-                if(this.mainJSON.taskNewGirl["listOfAnswersUrbanProblems_list" + id].length > 1){
-                    this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems.push(this.mainJSON.taskNewGirl["listOfAnswersUrbanProblems_list" + id][1])
-                    this.mainJSON.taskNewGirl["listOfAnswersUrbanProblems_list" + id].splice(1, 1)
+                if(this.mainJSON.taskCleaningDay["listOfAnswersUrbanProblems_list" + id].length > 1){
+                    this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems.push(this.mainJSON.taskCleaningDay["listOfAnswersUrbanProblems_list" + id][1])
+                    this.mainJSON.taskCleaningDay["listOfAnswersUrbanProblems_list" + id].splice(1, 1)
                 }
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskNewGirl.shownScreenID++
-                this.mainJSON.taskNewGirl.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                this.mainJSON.taskCleaningDay.shownScreenID++
+                this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                         el.isShow = true
                     }
                 })
 
-                if(this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list1.length !== 0) {
-                    this.mainJSON.taskNewGirl.results.ULSE2_Log1_SEK1_1 = this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list1[0].id
-                    if(this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list1[0].id === 7){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score1_SEK1_1 = 1
+                if(this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list1.length !== 0) {
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Log1_SEK1_1 = this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list1[0].id
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list1[0].id === 1){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK1_1 = 1
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Score1_SEK1_1 = 0
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK1_1 = 0
                 }
-                if(this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list2.length !== 0) {
-                    this.mainJSON.taskNewGirl.results.ULSE2_Log2_SEK1_1 = this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list2[0].id
-                    if(this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list2[0].id === 1){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score2_SEK1_1 = 1
+                if(this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list2.length !== 0) {
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Log2_SEK1_1 = this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list2[0].id
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list2[0].id === 2){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score2_SEK1_1 = 1
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Score2_SEK1_1 = 0
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Score2_SEK1_1 = 0
                 }
-                if(this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list3.length !== 0) {
-                    this.mainJSON.taskNewGirl.results.ULSE2_Log3_SEK1_1 = this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list3[0].id
+                if(this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list3.length !== 0) {
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Log3_SEK1_1 = this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list3[0].id
 
-                    if(this.mainJSON.taskNewGirl.listOfAnswersUrbanProblems_list3[0].id === 4){
-                        this.mainJSON.taskNewGirl.results.ULSE2_Score3_SEK1_1 = 1
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersUrbanProblems_list3[0].id === 3){
+                        this.mainJSON.taskCleaningDay.results.ULSE3_Score3_SEK1_1 = 1
                     }
-                    else this.mainJSON.taskNewGirl.results.ULSE2_Score3_SEK1_1 = 0
+                    else this.mainJSON.taskCleaningDay.results.ULSE3_Score3_SEK1_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

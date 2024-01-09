@@ -1,12 +1,12 @@
 <template>
     <div class="instruction-body" :class="{backgroundTaskLibraryNight: mainJSON.taskLibraryNight.isShow, backgroundTaskChatWinterHolidays: mainJSON.taskChatWinterHolidays.isShow ||
-    mainJSON.forms.isShow, backgroundTaskNewGirl: mainJSON.taskNewGirl.isShow}">
+    mainJSON.forms.isShow, backgroundTaskCleaningDay: mainJSON.taskCleaningDay.isShow}">
         <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
             <div class="instruction-card">
                 <div>
                     <p v-if="mainJSON.taskLibraryNight.isShow">{{constTaskLibraryNight.instruction}}</p>
                     <p v-if="mainJSON.taskChatWinterHolidays.isShow">{{constTaskChatWinterHolidays.instruction}}</p>
-                    <p v-if="mainJSON.taskNewGirl.isShow">{{constTaskNewGirl.instruction}}</p>
+                    <p v-if="mainJSON.taskCleaningDay.isShow">{{constTaskCleaningDay.instruction}}</p>
                     <p v-if="mainJSON.forms.isShow">{{constForm.instruction}}</p>
                 </div>
                 <div class="mt-3">
@@ -33,7 +33,7 @@
     export default {
         name: "InstructionPage",
         computed: {
-            ...mapGetters(['mainJSON', 'constTaskLibraryNight', 'constTaskChatWinterHolidays', 'constTaskNewGirl', 'constForm']),
+            ...mapGetters(['mainJSON', 'constTaskLibraryNight', 'constTaskChatWinterHolidays', 'constTaskCleaningDay', 'constForm']),
         },
         methods: {
             ...mapMutations(["push_mainJSON"]),
@@ -60,8 +60,8 @@
     .backgroundTaskChatWinterHolidays {
         background: url("../assets/TaskChatWinterHolidaysBackground.webp") rgba(255, 255, 255, 0.01) no-repeat center center fixed;
     }
-    .backgroundTaskNewGirl {
-        background: url("../assets/TaskNewGirlBackground.webp") rgba(255, 255, 255, 0.01) no-repeat center center fixed;
+    .backgroundTaskCleaningDay {
+        background: url("../assets/TaskCleaningDayBackground.webp") rgba(255, 255, 255, 0.01) no-repeat center center fixed;
     }
     .instruction-card {
         display: flex;

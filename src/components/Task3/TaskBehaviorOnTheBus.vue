@@ -1,11 +1,11 @@
 <template>
-    <div class="backgroundTaskNewGirl" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskCleaningDay" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block">
-            <p>Что ответишь однокласснице? Выбери один или несколько ответов.
+            <p>Что ответишь Паше? Выбери один или несколько ответов
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in mainJSON.taskNewGirl.listOfAnswersBehaviorOnTheBus" :key="el.id" :class="{choosenAnswer: el.choose}"
+            <div v-for="el in mainJSON.taskCleaningDay.listOfAnswersBehaviorOnTheBus" :key="el.id" :class="{choosenAnswer: el.choose}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -16,11 +16,11 @@
         <div class="background-text" id="background-text">
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].name}}</span>
-                    {{constTaskNewGirl.screens[this.mainJSON.taskNewGirl.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].name}}</span>
+                    {{constTaskCleaningDay.screens[this.mainJSON.taskCleaningDay.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskNewGirl.results.ULSE2_Log_SEK3_3 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskCleaningDay.results.ULSE3_Log_SEK3_3 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -33,7 +33,7 @@
         name: "TaskBehaviorOnTheBus",
         props: {
             screen: {},
-            constTaskNewGirl: {}
+            constTaskCleaningDay: {}
         },
         data() {
             return {
@@ -47,41 +47,41 @@
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el) {
                 let k = 0
-                this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.forEach(elMass => {
+                this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.forEach(elMass => {
                     if(elMass === el.id){
-                        this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.splice(this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.indexOf(elMass), 1)
+                        this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.splice(this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.indexOf(elMass), 1)
                         el.choose = false
                         k++
                     }
                 })
                 if(k === 0){
-                    this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.push(el.id)
+                    this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.push(el.id)
                     el.choose = true
                 }
-                this.mainJSON.taskNewGirl.results.ULSE2_Log_SEK3_3 = this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.join()
+                this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK3_3 = this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.join()
             },
             checkAnswer() {
                 screen.isShow = false
-                this.mainJSON.taskNewGirl.shownScreenID++
-                this.mainJSON.taskNewGirl.screens.forEach(el => {
-                    if (el.id === this.mainJSON.taskNewGirl.shownScreenID) {
+                this.mainJSON.taskCleaningDay.shownScreenID++
+                this.mainJSON.taskCleaningDay.screens.forEach(el => {
+                    if (el.id === this.mainJSON.taskCleaningDay.shownScreenID) {
                         el.isShow = true
                     }
                 })
                 let maxScore = 0
-                this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.forEach(el => {
-                    if(el === 1 || el === 3){
+                this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.forEach(el => {
+                    if(el === 3 || el === 4){
                         maxScore++
                     }
                 })
-                if(this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.length === 2 && maxScore === 2){
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_3 = 2
+                if(this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.length === 2 && maxScore === 2){
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 = 2
                 }
-                else if(this.mainJSON.taskNewGirl.listOfChoosenAnswersBehaviorOnTheBus.length === 1 && maxScore === 1){
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_3 = 1
+                else if(this.mainJSON.taskCleaningDay.listOfChoosenAnswersBehaviorOnTheBus.length === 1 && maxScore === 1){
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 = 1
                 }
                 else {
-                    this.mainJSON.taskNewGirl.results.ULSE2_Score_SEK3_3 = 0
+                    this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 = 0
                 }
 
                 let t = new Date()
