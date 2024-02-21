@@ -1,7 +1,7 @@
 <template>
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Выбери ВСЕ подходящие сайты, которыми можно воспользоваться, чтобы посмотреть достопримечательности Москвы онлайн.
+            <p>Выбери ВСЕ подходящие сайты, которыми можно воспользоваться, чтобы узнать сразу обо всех интересных событиях в городе.
             </p>
         </div>
         <div class="option-answers-background">

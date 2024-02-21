@@ -2,7 +2,7 @@
     <!--Задание 6 задание-->
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Что ответишь Вите? Выбери один вариант ответа.
+            <p>Что ответишь Алисе? Выбери один вариант ответа
             </p>
         </div>
         <div class="option-answers-background">

@@ -3,7 +3,7 @@
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>
-                Какие вещи в рюкзаке небезопасно проносить в библиотеку? Выложи ДВЕ вещи, перетащив из рюкзака на стол. 
+                Какие вещи в рюкзаке небезопасно проносить в культурный центр? Выложи ДВЕ вещи, перетащив из рюкзака на стол.
                 Чтобы вернуть вещь в рюкзак, снова перетащи ее.
             </p>
         </div>

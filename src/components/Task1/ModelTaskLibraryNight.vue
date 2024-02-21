@@ -1,17 +1,17 @@
 <template>
     <TextScreen v-if="screen.isShow && !screen.haveTask" :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-    <TaskMovingThingsFromBag v-if="screen.isShow && screen.haveTask && screen.taskName === 'MovingThingsFromBag'"
-                             :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-    <TaskChooseShoes v-if="screen.isShow && screen.haveTask && screen.taskName === 'ChooseShoes'"
-                     :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-    <TaskBadWeather v-if="screen.isShow && screen.haveTask && screen.taskName === 'BadWeather'"
-                    :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-    <TaskWarningSigns v-if="screen.isShow && screen.haveTask && screen.taskName === 'WarningSigns'"
-                      :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-    <TaskMetro v-if="screen.isShow && screen.haveTask && screen.taskName === 'Metro'"
+
+    <TaskSites v-if="screen.isShow && screen.haveTask && screen.taskName === 'Sites'"
                :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
     <TaskWorkBook v-if="screen.isShow && screen.haveTask && screen.taskName === 'WorkBook'"
                   :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
+    <TaskMovingThingsFromBag v-if="screen.isShow && screen.haveTask && screen.taskName === 'MovingThingsFromBag'"
+                             :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
+
+    <TaskChooseShoes v-if="screen.isShow && screen.haveTask && screen.taskName === 'ChooseShoes'"
+                     :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
+    <TaskMetro v-if="screen.isShow && screen.haveTask && screen.taskName === 'Metro'"
+               :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
     <TaskMuseumPaintings v-if="(screen.taskName === 'MuseumPaintings1' || screen.taskName === 'MuseumPaintings2') &&
                         screen.isShow && screen.haveTask"
                          :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
@@ -28,12 +28,16 @@
                      :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
     <TaskFestival v-if="screen.isShow && screen.haveTask && screen.taskName === 'Festival'"
                   :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-    <TaskSites v-if="screen.isShow && screen.haveTask && screen.taskName === 'Sites'"
-               :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
-
-
+    <TaskBadWeather v-if="screen.isShow && screen.haveTask && screen.taskName === 'BadWeather'"
+                    :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
+    <TaskWarningSigns v-if="screen.isShow && screen.haveTask && screen.taskName === 'WarningSigns'"
+                      :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
     <TaskWeatherForecast v-if="screen.isShow && screen.haveTask && screen.taskName === 'WeatherForecast'"
                          :screen="screen" :constTaskScienceFestival="constTaskScienceFestival"/>
+
+
+
+
 </template>
 
 <script>

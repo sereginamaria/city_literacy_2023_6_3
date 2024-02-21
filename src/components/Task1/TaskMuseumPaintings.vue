@@ -3,7 +3,7 @@
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 22">
         <div class="instruction-block" id="instruction-block">
-            <p>Выбери, какие правила дорожного движения нарушаются на этой книжной иллюстрации.
+            <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
             </p>
         </div>
         <div class="option-answers-background">
@@ -24,7 +24,7 @@
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 23">
         <div class="instruction-block" id="instruction-block">
-            <p>Выбери, какие правила дорожного движения нарушаются на этой книжной иллюстрации.
+            <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
             </p>
         </div>
         <div class="option-answers-background">

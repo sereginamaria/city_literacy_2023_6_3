@@ -3,7 +3,7 @@
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 29">
         <div class="instruction-block" id="instruction-block">
-            <p>Что ответишь Вите?
+            <p>Что ответишь Алисе?
             </p>
         </div>
         <div class="option-answers-background">
@@ -31,7 +31,7 @@
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 33">
         <div class="instruction-block" id="instruction-block">
-            <p>Что ответишь Вите? Выбери один вариант ответа.
+            <p>Что ответишь Алисе? Выбери один вариант ответа.
             </p>
         </div>
         <div class="option-answers-background">

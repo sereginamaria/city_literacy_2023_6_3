@@ -2,7 +2,7 @@
     <!--Задание в метро-->
     <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Что ответить Кате? Выбери один вариант ответа.
+            <p>Что ответить Давиду? Выбери один вариант ответа.
             </p>
         </div>
         <div class="option-answers-background">

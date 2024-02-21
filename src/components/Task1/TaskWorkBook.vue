@@ -7,7 +7,7 @@
         </div>
         <div class="background-task1">
             <div style="line-height: 3; text-align: justify; font-size: 18px" id="collapseModularTask4">
-                Считается, что Москва появилась в
+                Годом основания Москвы считается
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ1" aria-expanded="false" aria-controls="collapseWorkBookQ1"
                       @click="openWorkBookQ(14)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_1 === 'NA'}"
                 >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_1 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_1 : "_______"}}</span>
@@ -21,7 +21,7 @@
                         </p>
                     </div>
                 </div>
-                году. Город был основан
+                Город был основан
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ2" aria-expanded="false" aria-controls="collapseWorkBookQ2"
                       @click="openWorkBookQ(15)" style="text-decoration: underline; font-size: 18px; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_2 === 'NA'}"
                 >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_2 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_2 : "_______"}}</span>.
@@ -35,28 +35,28 @@
                         </p>
                     </div>
                 </div>
-                Главной торговой площадью средневековой Москвы была
+                В самом центре города, у стен Кремля, находится сад, который называется
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ3" aria-expanded="false" aria-controls="collapseWorkBookQ3"
                       @click="openWorkBookQ(16)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_3 === 'NA'}"
                 >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_3 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_3 : "_______"}}</span>.
                 <div class="collapse" id="collapseWorkBookQ3" style="position: absolute" data-bs-parent="#collapseModularTask4">
                     <div class="card card-body">
                         <p>
-                            Какая площадь была главной в средневековой Москве?
+                            Как называется сад?
                         </p>
                         <p>
                             Выбери правильный рисунок в правой части тетради.
                         </p>
                     </div>
                 </div>
-                В наши дни рядом с этой площадью находится памятник
+                В нём находится национальный мемориал воинской славы –
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ4" aria-expanded="false" aria-controls="collapseWorkBookQ4"
                       @click="openWorkBookQ(17)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 === 'NA'}"
                 >{{this.mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL2_Log_LLK1_4 : "_______"}}</span>.
                 <div class="collapse" id="collapseWorkBookQ4" style="position: absolute" data-bs-parent="#collapseModularTask4">
                     <div class="card card-body">
                         <p>
-                            Кому поставлен этот памятник?
+                           Как называется этот мемориал?
                         </p>
                         <p>
                             Выбери правильный ответ в правой части тетради.

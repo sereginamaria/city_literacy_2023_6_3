@@ -3,7 +3,7 @@
     <div class="backgroundTaskLibraryNight d-flex align-items-center flex-column"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" style="backdrop-filter: blur(5px);">
         <div class="instruction-block" id="instruction-block">
-            <p>Построй план прогулки по времени. Выбери, когда лучше посетить то или иное место. Перетащи название места в нужный временной промежуток.
+            <p>Построй план прогулки по времени. Выбери, когда лучше посетить то или иное место. Перетащи подходящую активность в нужный временной промежуток.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100 flex-column"

@@ -111,35 +111,35 @@ const date = {
         "screens": [
             {"id": 0, "isShow": true, "imgURL": "TaskScienceFestivalMovingThingsFromBagKate", "haveTask": false,
                 "description": ''},
-            {"id": 1, "isShow": false, "imgURL": "TaskScienceFestivalMovingThingsFromBag", "haveTask": true, "taskName": "MovingThingsFromBag",
-                "description": 'Перетаскивание вещей'},
+            {"id": 1, "isShow": false, "imgURL": "TaskScienceFestivalMovingThingsFromBag", "haveTask": true, "taskName": "Sites",
+                "description": ''},
 
             {"id": 2, "isShow": false, "imgURL": "TaskScienceFestivalChooseShoesKate", "haveTask": false,
                 "description": ''},
-            {"id": 3, "isShow": true, "imgURL": "TaskScienceFestivalChooseShoеs", "haveTask": true, "taskName": "ChooseShoes",
-                "description": 'Выбор обуви'},
+            {"id": 3, "isShow": true, "imgURL": "TaskScienceFestivalChooseShoеs", "haveTask": true, "taskName": "WorkBook",
+                "description": ''},
 
             {"id": 4, "isShow": false, "imgURL": "TaskScienceFestivalBadWeather", "haveTask": false,
                 "description": ''},
-            {"id": 5, "isShow": false, "imgURL": "TaskScienceFestivalBagWeatherKate", "haveTask": false,
+            {"id": 5, "isShow": false, "imgURL": "TaskScienceFestivalBagWeatherKate", "haveTask": true, "taskName": "MovingThingsFromBag",
                 "description": ''},
-            {"id": 6, "isShow": false, "imgURL": "TaskScienceFestivalBadWeather0", "haveTask": true, "taskName": "BadWeather",
-                "description": 'Плохая погода (и 4 раза фон меняется)'},
 
-            {"id": 7, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsKate", "haveTask": false,
+            {"id": 6, "isShow": false, "imgURL": "TaskScienceFestivalBadWeather0", "haveTask": false,
                 "description": ''},
-            {"id": 8, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsKate", "haveTask": true, "taskName": "WarningSigns",
+            {"id": 7, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsKate", "haveTask": true, "taskName": "ChooseShoes",
+                "description": ''},
+
+            {"id": 8, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsKate", "haveTask": false,
                 "description": 'Предупреждающие знаки'},
-
             {"id": 9, "isShow": false, "imgURL": "TaskScienceFestivalMetroKate1", "haveTask": false,
                 "description": ''},
-            {"id": 10, "isShow": false, "imgURL": "TaskScienceFestivalMetro", "haveTask": false,
+            {"id": 10, "isShow": false, "imgURL": "TaskScienceFestivalMetro", "haveTask": true, "taskName": "Metro",
                 "description": ''},
+
             {"id": 11, "isShow": false, "imgURL": "TaskScienceFestivalMetroKate2", "haveTask": false,
                 "description": ''},
-            {"id": 12, "isShow": false, "imgURL": "TaskScienceFestivalMetroKate3", "haveTask": true, "taskName": "Metro",
+            {"id": 12, "isShow": false, "imgURL": "TaskScienceFestivalMetroKate3", "haveTask": false,
                 "description": 'Метро'},
-
             {"id": 13, "isShow": false, "imgURL": "TaskScienceFestivalLibraryKate1", "haveTask": false,
                 "description": ''},
             {"id": 14, "isShow": false, "imgURL": "TaskScienceFestivalLibrary", "haveTask": false,
@@ -150,101 +150,108 @@ const date = {
                 "description": ''},
             {"id": 17, "isShow": false, "imgURL": "TaskScienceFestivalLibraryVitya2", "haveTask": false,
                 "description": ''},
-            {"id": 18, "isShow": false, "imgURL": "TaskScienceFestivalLibraryKate3", "haveTask": false,
+            {"id": 18, "isShow": false, "imgURL": "TaskScienceFestivalLibraryKate3", "haveTask": true, "taskName": "MuseumPaintings1",
                 "description": ''},
-            {"id": 19, "isShow": false, "imgURL": "TaskScienceFestivalLibraryVitya3", "haveTask": false,
+            {"id": 19, "isShow": false, "imgURL": "TaskScienceFestivalLibraryVitya3", "haveTask": true, "taskName": "MuseumPaintings2",
                 "description": ''},
+
             {"id": 20, "isShow": false, "imgURL": "TaskScienceFestivalLibraryKate4", "haveTask": false,
                 "description": ''},
             {"id": 21, "isShow": false, "imgURL": "TaskScienceFestivalLibraryVitya4", "haveTask": false,
                 "description": ''},
-            {"id": 22, "isShow": false, "imgURL": "TaskScienceFestivalLibraryPainting1", "haveTask": true, "taskName": "MuseumPaintings1",
-                "description": 'Картины'},
-            {"id": 23, "isShow": false, "imgURL": "TaskScienceFestivalLibraryPainting2", "haveTask": true, "taskName": "MuseumPaintings2",
-                "description": 'Картины'},
-
-            {"id": 24, "isShow": false, "imgURL": "TaskScienceFestivalWorkbookBackground", "haveTask": false,
-                "description": ''},
-            {"id": 25, "isShow": false, "imgURL": "TaskScienceFestivalWorkbookVitya", "haveTask": false,
-                "description": ''},
-            {"id": 26, "isShow": false, "imgURL": "TaskScienceFestivalWorkbook", "haveTask": true, "taskName": "WorkBook",
-                "description": 'Раюочая тетрадь'},
-
-            {"id": 27, "isShow": false, "imgURL": "TaskScienceFestivalHooligans", "haveTask": false,
-                "description": ''},
-            {"id": 28, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya1", "haveTask": false,
-                "description": ''},
-            {"id": 29, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya2", "haveTask": true, "taskName": "Hooligans1",
-                "description": 'Статуя'},
-            {"id": 30, "isShow": false, "imgURL": "TaskScienceFestivalHooligansKate", "haveTask": false,
-                "description": ''},
-            {"id": 31, "isShow": false, "imgURL": "TaskScienceFestivalHooligansKate", "haveTask": false,
-                "description": ''},
-            {"id": 32, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya3", "haveTask": false,
-                "description": ''},
-            {"id": 33, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya4", "haveTask": true, "taskName": "Hooligans2",
-                "description": 'Вторая статуя'},
-
-            {"id": 34, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya1", "haveTask": false,
-                "description": ''},
-            {"id": 35, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya2", "haveTask": true, "taskName": "Escape",
-                "description": 'Побег'},
-
-            {"id": 36, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate1", "haveTask": false,
-                "description": ''},
-            {"id": 37, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya3", "haveTask": false,
-                "description": ''},
-            {"id": 38, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate2", "haveTask": false,
-                "description": ''},
-            {"id": 39, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya3", "haveTask": false,
-                "description": ''},
-            {"id": 40, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate2", "haveTask": false,
-                "description": ''},
-            {"id": 41, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate2", "haveTask": false,
+            {"id": 22, "isShow": false, "imgURL": "TaskScienceFestivalLibraryPainting1", "haveTask": true, "taskName": "Escape",
                 "description": ''},
 
-            {"id": 42, "isShow": false, "imgURL": "TaskScienceFestivalMapVitya", "haveTask": false,
+            {"id": 23, "isShow": false, "imgURL": "TaskScienceFestivalSitesVitya2", "haveTask": false,
                 "description": ''},
-            {"id": 43, "isShow": false, "imgURL": "TaskScienceFestivalMapKate", "haveTask": false,
+            {"id": 24, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastVitya1", "haveTask": false,
                 "description": ''},
-            {"id": 44, "isShow": false, "imgURL": "TaskScienceFestivalMap", "haveTask": true, "taskName": "Map",
-                "description": 'Карта'},
+            {"id": 25, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastKate", "haveTask": false,
+                "description": ''},
+            {"id": 26, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecast", "haveTask": false,
+                "description": ''},
+            {"id": 27, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecast", "haveTask": false,
+                "description": ''},
+            {"id": 28, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastVitya2", "haveTask": false,
+                "description": ''},
 
-            {"id": 45, "isShow": false, "imgURL": "TaskScienceFestivalFireVitya1", "haveTask": false,
+            {"id": 29, "isShow": false, "imgURL": "TaskScienceFestivalLibraryPainting2", "haveTask": false,
                 "description": ''},
-            {"id": 46, "isShow": false, "imgURL": "TaskScienceFestivalFireVitya2", "haveTask": false,
+            {"id": 30, "isShow": false, "imgURL": "TaskScienceFestivalWorkbookBackground", "haveTask": false,
                 "description": ''},
-            {"id": 47, "isShow": false, "imgURL": "TaskScienceFestivalFireVitya3", "haveTask": true, "taskName": "Fire",
-                "description": 'Пожар'},
+            {"id": 31, "isShow": false, "imgURL": "TaskScienceFestivalWorkbookVitya", "haveTask": true, "taskName": "Fire",
+                "description": ''},
 
-            {"id": 48, "isShow": false, "imgURL": "TaskScienceFestivalAttractions", "haveTask": false,
+            {"id": 32, "isShow": false, "imgURL": "TaskScienceFestivalWorkbook", "haveTask": false,
                 "description": ''},
-            {"id": 49, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsVitya", "haveTask": false,
+            {"id": 33, "isShow": false, "imgURL": "TaskScienceFestivalHooligans", "haveTask": false,
                 "description": ''},
-            {"id": 50, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsVitya", "haveTask": true, "taskName": "Attractions",
-                "description": 'Достопримечательности'},
+            {"id": 34, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya1", "haveTask": true, "taskName": "Hooligans",
+                "description": ''},
+            {"id": 35, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya2", "haveTask": false,
+                "description": ''},
+            {"id": 36, "isShow": false, "imgURL": "TaskScienceFestivalHooligansKate", "haveTask": false,
+                "description": ''},
+            {"id": 37, "isShow": false, "imgURL": "TaskScienceFestivalHooligansKate", "haveTask": false,
+                "description": ''},
+            {"id": 38, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya3", "haveTask": false,
+                "description": ''},
+            {"id": 39, "isShow": false, "imgURL": "TaskScienceFestivalHooligansVitya4", "haveTask": true, "taskName": "Hooligans2",
+                "description": ''},
 
-            {"id": 51, "isShow": false, "imgURL": "TaskScienceFestivalFestivalVitya1", "haveTask": false,
-                "description": ''},
-            {"id": 52, "isShow": false, "imgURL": "TaskScienceFestivalFestivalKate", "haveTask": false,
-                "description": ''},
-            {"id": 53, "isShow": false, "imgURL": "TaskScienceFestivalFestivalVitya2", "haveTask": true, "taskName": "Festival",
-                "description": 'Фестиваль'},
 
-            {"id": 54, "isShow": false, "imgURL": "TaskScienceFestivalSitesVitya1", "haveTask": false,
+            {"id": 40, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya1", "haveTask": false,
                 "description": ''},
-            {"id": 55, "isShow": false, "imgURL": "TaskScienceFestivalSitesVitya2", "haveTask": true, "taskName": "Sites",
-                "description": 'Сайты'},
+            {"id": 41, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya2", "haveTask": false,
+                "description": ''},
+            {"id": 42, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate1", "haveTask": true, "taskName": "Map",
+                "description": ''},
 
-            {"id": 56, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastVitya1", "haveTask": false,
+            {"id": 43, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya3", "haveTask": false,
                 "description": ''},
-            {"id": 57, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastKate", "haveTask": false,
+            {"id": 44, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate2", "haveTask": false,
                 "description": ''},
-            {"id": 58, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecast", "haveTask": true, "taskName": "WeatherForecast",
-                "description": 'Прогноз погоды'},
+            {"id": 45, "isShow": false, "imgURL": "TaskScienceFestivalEscapeVitya3", "haveTask": true, "taskName": "Attractions",
+                "description": ''},
 
-            {"id": 59, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastVitya2", "haveTask": false,
+            {"id": 46, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate2", "haveTask": false,
                 "description": ''},
+            {"id": 47, "isShow": false, "imgURL": "TaskScienceFestivalEscapeKate2", "haveTask": false,
+                "description": ''},
+            {"id": 48, "isShow": false, "imgURL": "TaskScienceFestivalMapVitya", "haveTask": true, "taskName": "Festival",
+                "description": ''},
+
+            {"id": 49, "isShow": false, "imgURL": "TaskScienceFestivalMapKate", "haveTask": false,
+                "description": ''},
+            {"id": 50, "isShow": false, "imgURL": "TaskScienceFestivalMap", "haveTask": false,
+                "description": ''},
+            {"id": 51, "isShow": false, "imgURL": "TaskScienceFestivalFireVitya1", "haveTask": false,
+                "description": ''},
+            {"id": 52, "isShow": false, "imgURL": "TaskScienceFestivalFireVitya2", "haveTask": false,
+                "description": ''},
+            {"id": 53, "isShow": false, "imgURL": "TaskScienceFestivalFireVitya3", "haveTask": true, "taskName": "BadWeather",
+                "description": ''},
+
+            {"id": 54, "isShow": false, "imgURL": "TaskScienceFestivalAttractions", "haveTask": false,
+                "description": ''},
+            {"id": 55, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsVitya", "haveTask": false,
+                "description": ''},
+            {"id": 56, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsVitya", "haveTask": false,
+                "description": ''},
+            {"id": 57, "isShow": false, "imgURL": "TaskScienceFestivalFestivalVitya1", "haveTask": true, "taskName": "WarningSigns",
+                "description": ''},
+
+            {"id": 58, "isShow": false, "imgURL": "TaskScienceFestivalFestivalKate", "haveTask": false,
+                "description": ''},
+            {"id": 59, "isShow": false, "imgURL": "TaskScienceFestivalFestivalVitya2", "haveTask": false,
+                "description": ''},
+            {"id": 60, "isShow": false, "imgURL": "TaskScienceFestivalSitesVitya1", "haveTask": true, "taskName": "WeatherForecast",
+                "description": ''},
+
+            {"id": 61, "isShow": false, "imgURL": "TaskScienceFestivalFestivalVitya2", "haveTask": false,
+                "description": ''},
+
+
         ],
         //Перетаскивание вещей в рюкзаке
         "listOfElementsStart": [  // todo контекстуальные стили? подумать про state machine
@@ -411,31 +418,31 @@ const date = {
         "listOfElementsTaskAttractions": [
             {
                 "id": 1,
-                "value": "Государственный исторический музей"
-            },
-            {
-                "id": 2,
-                "value": "Российская государственная библиотека"
-            },
-            {
-                "id": 4,
-                "value": "Измайловский парк"
-            },
-            {
-                "id": 5,
                 "value": "Александровский сад"
             },
             {
+                "id": 2,
+                "value": "Сад культуры и отдыха им. Н.Э. Баумана"
+            },
+            {
+                "id": 4,
+                "value": "Государственный исторический музей"
+            },
+            {
+                "id": 5,
+                "value": "Политехнический музей"
+            },
+            {
                 "id": 6,
-                "value": "Пушкинский музей"
+                "value": "Большой театр"
             },
             {
                 "id": 7,
-                "value": "Манежная площадь"
+                "value": "Российская государственная библиотека"
             },
             {
                 "id": 8,
-                "value": "Большой театр"
+                "value": "Парк Горького"
             },
         ],
         "listOfAnswersTaskAttractions_1": [],
@@ -453,8 +460,8 @@ const date = {
                 "choose": false,
             },
             {
-                "name": "Музейная Москва онлайн. Департамент культуры Москвыя",
-                "link": "https://museum-online.moscow/",
+                "name": "Выставочные залы Москвы",
+                "link": "vzmoscow.ru",
                 "id": 2,
                 "choose": false,
             },
@@ -464,8 +471,8 @@ const date = {
                 "id": 3,
                 "choose": false,
             }, {
-                "name": "Ассоциация парков России/ParkSeason",
-                "link": "https://parkseason.ru/",
+                "name": "Интерактивная карта Москвы",
+                "link": "https://moscowmap.ru/",
                 "id": 4,
                 "choose": false,
             },
@@ -474,21 +481,21 @@ const date = {
 
         "listOfAnswersTaskBadWeather": [
             {
-                "name": "Спрятаться у ларька с мороженым.",
+                "name": "Спрятаться у торговой палатки",
                 "id": 1,
                 "choose": false,
             },
             {
-                "name": "Подождать под большим деревом, пока пройдет гроза.",
+                "name": "Переждать под зонтиками на веранде кафе",
                 "id": 2,
                 "choose": false,
             },
             {
-                "name": "Спрятаться в беседке возле прудов.",
+                "name": "Спрятаться в беседке возле прудов",
                 "id": 3,
                 "choose": false,
             }, {
-                "name": "Зайти в ближайший магазин.",
+                "name": "Зайти в ближайший магазин",
                 "id": 4,
                 "choose": false,
             },
