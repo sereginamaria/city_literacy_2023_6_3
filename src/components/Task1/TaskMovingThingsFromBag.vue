@@ -119,22 +119,22 @@
                     let middleScore = 0
                     this.mainJSON.taskScienceFestival.listOfElementsEnd.forEach(el => {
                         answers.push(el.id)
-                        if(el.id === 2 || el.id === 7){
+                        if(el.id === 1 || el.id === 7){
                             maxScore++
                         }
-                        if(el.id === 1 || el.id === 3 || el.id === 4 || el.id === 5 || el.id === 6){
+                        if(el.id === 2 || el.id === 3 || el.id === 4 || el.id === 6){
                             middleScore++
                         }
                     })
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_2 = answers.join()
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_2 = answers.join()
                     if(this.mainJSON.taskScienceFestival.listOfElementsEnd.length === 2 && maxScore === 2){
-                        this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_2 = 2
+                        this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_2 = 2
                     }
                     else if(this.mainJSON.taskScienceFestival.listOfElementsEnd.length === 2 && maxScore === 1 && middleScore === 1){
-                        this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_2 = 1
+                        this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_2 = 1
                     }
                     else {
-                        this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_2 = 0
+                        this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_2 = 0
                     }
 
                     let t = new Date()

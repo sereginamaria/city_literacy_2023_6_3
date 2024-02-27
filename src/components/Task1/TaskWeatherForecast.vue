@@ -1,6 +1,6 @@
 <template>
     <!--Задание 15 задание-->
-    <div class="backgroundTaskScienceFestival d-flex align-items-center flex-column"
+    <div class="background backgroundTaskScienceFestival d-flex align-items-center flex-column"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" style="backdrop-filter: blur(5px);">
         <div class="instruction-block" id="instruction-block">
             <p>Построй план прогулки по времени. Выбери, когда лучше посетить то или иное место. Перетащи подходящую активность в нужный временной промежуток.
@@ -103,8 +103,8 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_2 !== 'NA'
-            || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_3 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_4 !== 'NA'"
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_1 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_2 !== 'NA'
+            || mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_3 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_4 !== 'NA'"
             >Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
@@ -139,7 +139,7 @@
                     this.mainJSON.taskScienceFestival.listOfAnswersTaskWeatherForecast.push(this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id][1])
                     this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id].splice(1, 1)
                 }
-                this.mainJSON.taskScienceFestival.results['ULSCLL2_Log_LLK6_' + id] = this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id][0].id
+                this.mainJSON.taskScienceFestival.results['ULSCLL3_Log_LLK6_' + id] = this.mainJSON.taskScienceFestival["listOfAnswersTaskWeatherForecast_" + id][0].id
             },
             checkAnswer() {
                 screen.isShow = false
@@ -149,12 +149,12 @@
                         el.isShow = true
                     }
                 })
-                if((this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 === 3) &&
-                    (this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_3 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_3 === 3)) {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK6_1 = 1
+                if((this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_1 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_1 === 3) &&
+                    (this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_3 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK6_3 === 3)) {
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK6_1 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK6_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK6_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =
@@ -179,6 +179,9 @@
 </script>
 
 <style scoped>
+.background {
+    background-position: center !important;;
+}
     .list-of-answers-weather-forecast {
         text-align: center;
         height: 25%;

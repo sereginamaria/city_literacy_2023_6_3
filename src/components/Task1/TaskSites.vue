@@ -22,7 +22,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 !== 'NA' && mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 !== ''">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK5_1 !== 'NA' && mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK5_1 !== ''">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -55,7 +55,7 @@
                     this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.push(el.id)
                     el.choose = true
                 }
-                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 = this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.join()
+                this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK5_1 = this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.join()
             },
             checkAnswer() {
                 screen.isShow = false
@@ -72,13 +72,13 @@
                     }
                 })
                 if(this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.length === 2 && maxScore === 2){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK5 = 2
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK5_1 = 2
                 }
                 else if(this.mainJSON.taskScienceFestival.listOfChoosenAnswersTaskSites.length === 1 && maxScore === 1){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK5 = 1
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK5_1 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK5 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK5_1 = 0
                 }
                 
                 let t = new Date()

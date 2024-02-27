@@ -6,7 +6,7 @@
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskEscape" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskEscape" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -22,7 +22,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="nextTask(screen)" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="nextTask(screen)" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons"  disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -45,14 +45,14 @@
             nextTask(screen){
                 screen.isShow = false
 
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 === 3){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 3 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 4){
                     this.mainJSON.taskScienceFestival.shownScreenID++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 === 2){
-                    this.mainJSON.taskScienceFestival.shownScreenID+=6
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 1){
+                    this.mainJSON.taskScienceFestival.shownScreenID+=5
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 === 4){
-                    this.mainJSON.taskScienceFestival.shownScreenID+=4
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 2){
+                    this.mainJSON.taskScienceFestival.shownScreenID+=2
                 }
 
                 this.mainJSON.taskScienceFestival.screens.forEach(el => {
@@ -61,11 +61,11 @@
                     }
                 })
 
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 === 2 || this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 === 4){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCS4_1 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 1 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 3){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCS4_1 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCS4_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCS4_1 = 0
                 }
 
                 let t = new Date()
@@ -85,7 +85,7 @@
                 })
             },
             chooseAnswer(el){
-                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 = el.id
+                this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 = el.id
             },
         }
     }

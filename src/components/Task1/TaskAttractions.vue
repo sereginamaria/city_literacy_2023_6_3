@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskScienceFestival"
+    <div class=" background backgroundTaskScienceFestival"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>
@@ -76,7 +76,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK2_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK2_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -112,7 +112,7 @@
                 }
                 if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1.length !== 0 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2.length !== 0 &&
                     this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3.length !== 0){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK2_1 =  "Слот 1: " + this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].value + ", Слот 2: " +
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK2_1 =  "Слот 1: " + this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].value + ", Слот 2: " +
                         this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].value + ", Слот 3: " + this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3[0].value
                 }
             },
@@ -124,12 +124,12 @@
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].id === 6 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].id === 5 &&
-                    this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3[0].id === 2){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK2_1 = 1
+                if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].id === 4 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].id === 1 &&
+                    this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3[0].id === 6){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK2_1 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK2_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK2_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =
@@ -155,6 +155,9 @@
 </script>
 
 <style scoped>
+.background {
+    background-position: center !important;;
+}
     .task10 {
         min-height: 40px;
         width: calc(100%/1.5);

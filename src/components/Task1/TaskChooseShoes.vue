@@ -7,7 +7,7 @@
             </p>
         </div>
         <div>
-            <img src="../../assets/Boots1.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 === 1}"
+            <img src="../../assets/Boots1.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 === 1}"
                  @click="addAnswer(1)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Большой рюкзак"
                  style="width: calc(100%/4);
     left: calc(100%/2.6);
@@ -15,7 +15,7 @@
     /* width: calc(100%/3); */
     position: absolute;"
             >
-            <img src="../../assets/Boots2.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 === 2}"
+            <img src="../../assets/Boots2.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 === 2}"
                  @click="addAnswer(2)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Маленький рюкзак"
                  style="width: calc(100%/4);
     left: calc(100%/2.6);
@@ -23,7 +23,7 @@
     /* width: calc(100%/3); */
     position: absolute;"
             >
-            <img src="../../assets/Boots3.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 === 3}"
+            <img src="../../assets/Boots3.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 === 3}"
                  @click="addAnswer(3)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Большой рюкзак"
                  style="width: calc(100%/4);
     left: calc(100%/2.6);
@@ -31,7 +31,7 @@
     /* width: calc(100%/3); */
     position: absolute;"
             >
-            <img src="../../assets/Boots4.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 === 4}"
+            <img src="../../assets/Boots4.png" alt="" :class="{colorBoots: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 === 4}"
                  @click="addAnswer(4)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Маленький рюкзак"
                  style="width: calc(100%/4);
     left: calc(100%/2.6);
@@ -47,7 +47,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -69,7 +69,7 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             addAnswer(id){
-                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 = id
+                this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 = id
             },
             checkAnswer(){
                 screen.isShow = false
@@ -79,11 +79,11 @@
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 === 2){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_3 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK1_3 === 1){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_3 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK1_3 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_3 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

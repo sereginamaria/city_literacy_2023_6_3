@@ -1,6 +1,6 @@
 <template>
     <!--Задание 9 задание-->
-    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="background backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Проверь эту карту. Выбери ДВА объекта, которых на самом деле НЕТ в Москве. Ты можешь вернуть объект на карту, кликнув на него еще раз.
             </p>
@@ -20,7 +20,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK3_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK3_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -64,7 +64,7 @@
             addAnswer(el){
                 if (el.choose !== null) {
                     el.choose = !el.choose
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK3_1 = this.mainJSON.taskScienceFestival.listOfAnswersTask9.join()
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK3_1 = this.mainJSON.taskScienceFestival.listOfAnswersTask9.join()
                 }
 
             },
@@ -77,7 +77,7 @@
                             this.mainJSON.taskScienceFestival.listOfAnswersTask9.push(el.name)
                         }
                     })
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK3_1 = this.mainJSON.taskScienceFestival.listOfAnswersTask9.join()
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_LLK3_1 = this.mainJSON.taskScienceFestival.listOfAnswersTask9.join()
 
                     screen.isShow = false
                     this.mainJSON.taskScienceFestival.shownScreenID++
@@ -95,13 +95,13 @@
                     }
                 })
                 if(this.mainJSON.taskScienceFestival.listOfAnswersTask9.length === 2 && maxScore === 2){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK3_1 = 2
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK3_1 = 2
                 }
                 else if(this.mainJSON.taskScienceFestival.listOfAnswersTask9.length === 2 && maxScore === 1){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK3_1 = 1
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK3_1 = 1
                 }
                 else{
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_LLK3_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK3_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =
@@ -124,6 +124,9 @@
 </script>
 
 <style scoped>
+.background {
+    background-position: center !important;;
+}
     .choose {
         opacity: 0.5;
     }

@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskScienceFestival d-flex align-items-center flex-column"
+    <div class="background backgroundTaskScienceFestival d-flex align-items-center flex-column"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" style="backdrop-filter: blur(5px);">
         <div class="instruction-block" id="instruction-block">
             <p>Перемести предупреждающие знаки под соответствующие подписи.
@@ -133,7 +133,7 @@
                     this.mainJSON.taskScienceFestival["listOfAnswersTaskWarningSigns_" + id].splice(1, 1)
                 }
                 let idNew = id + 1
-                this.mainJSON.taskScienceFestival.results['ULSCLL2_Log_SCK3_' + idNew] = this.mainJSON.taskScienceFestival["listOfAnswersTaskWarningSigns_" + id][0].id
+                this.mainJSON.taskScienceFestival.results['ULSCLL3_Log_SCK3_' + idNew] = this.mainJSON.taskScienceFestival["listOfAnswersTaskWarningSigns_" + id][0].id
             },
             checkAnswer() {
                 screen.isShow = false
@@ -144,23 +144,23 @@
                     }
                 })
                 let k = 0
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_2 === 6){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_2 === 6){
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_3 === 4){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_32 === 1){
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_4 === 2){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_43 === 5{
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_5 === 7){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_54 === 7){
                     k++
                 }
                 if(k === 4){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK3_2 = 1
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK3_2 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK3_2 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK3_2 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =
@@ -186,6 +186,9 @@
 </script>
 
 <style scoped>
+.background {
+    background-position: center !important;;
+}
     .task14Triangle {
         background: url("../../assets/triangle.png") rgba(255, 255, 255, 0.01) no-repeat;
         background-size: contain;

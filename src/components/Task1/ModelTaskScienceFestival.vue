@@ -95,6 +95,7 @@ export default {
     height: calc(100vh - 140px);
     backdrop-filter: blur(5px);
     background-size: cover !important;
+    /*background-position: center !important;*/
     background-position: 0 5% !important;
 }
 

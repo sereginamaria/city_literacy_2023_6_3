@@ -1,13 +1,13 @@
 <template>
     <!--Задание 7 задание 1-->
     <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
-         v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 29">
+         v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 34">
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Алисе?
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskHooligans1" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_2}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskHooligans1" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_2}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(1, el)">
@@ -23,19 +23,19 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="nextTask(screen)" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_2 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="nextTask(screen)" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_2 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
     <!--Задание 7 задание 2-->
     <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
-         v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 33">
+         v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 39">
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Алисе? Выбери один вариант ответа.
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskHooligans2" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_3}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskHooligans2" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_3}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(2, el)">
@@ -51,7 +51,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_3 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_3 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -73,15 +73,15 @@
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(qID, el){
                 if(qID === 1){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_2 = el.id
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_2 = el.id
                 }
                 if(qID === 2){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_3 = el.id
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_3 = el.id
                 }
             },
             nextTask(screen){
                 screen.isShow = false
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_2 === 1){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_2 === 1){
                     this.mainJSON.taskScienceFestival.shownScreenID++
                 }
                 else {
@@ -101,17 +101,17 @@
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_2 === 2){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCS4_2 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_2 === 2){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCS4_2 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCS4_2 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCS4_2 = 0
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_3 === 1){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCS4_3 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_3 === 1){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCS4_3 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCS4_3 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCS4_3 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

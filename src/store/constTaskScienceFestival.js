@@ -176,8 +176,8 @@ const constTaskScienceFestival = {
     ],
     "listOfAnswersTaskWorkBook1": [
         {"id": 1, "value": "В 1100 году"},
-        {"id": 2, "value": "В 1177 году"},
-        {"id": 3, "value": "В 1147 году"},
+        {"id": 2, "value": "В 1147 году"},
+        {"id": 3, "value": "В 1177 году"},
         {"id": 4, "value": "В 1240 году"},
     ],
     "listOfAnswersTaskWorkBook2": [
@@ -189,12 +189,12 @@ const constTaskScienceFestival = {
         {
             "src": "Workbook2.webp",
             "value": "Князь Александр Невский",
-            "id": 2,
+            "id": 3,
         },
         {
             "src": "Workbook3.webp",
             "value": "Князь Владимир Мономах",
-            "id": 3,
+            "id": 2,
         },
         {
             "src": "Workbook4.webp",
@@ -243,7 +243,7 @@ const constTaskScienceFestival = {
             "id": 2,
         },
         {
-            "name": "Нельзя переходить дорогу детям без есопровождения взрослых.",
+            "name": "Нельзя переходить дорогу детям без сопровождения взрослых.",
             "id": 3,
         }, {
             "name": "Нельзя переходить дорогу без светоотражающих элементов одежды.",

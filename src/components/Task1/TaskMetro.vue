@@ -6,7 +6,7 @@
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMetro" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMetro" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK2_1}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -23,7 +23,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK2_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -44,7 +44,7 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el){
-                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1 = el.id
+                this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK2_1 = el.id
             },
             checkAnswer(){
                 screen.isShow = false
@@ -54,11 +54,11 @@
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1 === 3){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK2_1 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK2_1 === 3){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK2_1 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK2_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK2_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =

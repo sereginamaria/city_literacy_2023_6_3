@@ -2,7 +2,7 @@
     <div class="backgroundTaskScienceFestival"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
     >
-        <div v-if="screen.id === 4 || screen.id === 10 || screen.id === 14 || screen.id === 24 || screen.id === 27 || screen.id === 45 || screen.id === 48">
+        <div v-if="screen.id === 8 || screen.id === 12 || screen.id === 20 || screen.id === 29 || screen.id === 32 || screen.id === 43 || screen.id === 50 || screen.id === 54">
             <div class="background-text-center">
                 <p>
                     <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
@@ -124,7 +124,7 @@
                 })
             },
             nextTask(screen){
-                if(screen.id === 59){
+                if(screen.id === 61){
                     this.modalVisible = true
                     this.modalButtons = [
                         {value: "Хорошо", status: true}
@@ -133,14 +133,14 @@
                 }
                 else {
                     screen.isShow = false
-                    if(screen.id !== 30 || screen.id !== 38 || screen.id !== 40) {
+                    if(screen.id !== 23 || screen.id !== 26 || screen.id !== 36) {
                         this.mainJSON.taskScienceFestival.shownScreenID++
                     }
-                    if(screen.id === 30){
-                        this.mainJSON.taskScienceFestival.shownScreenID = 32
+                    if(screen.id === 36 ){
+                        this.mainJSON.taskScienceFestival.shownScreenID = 39
                     }
-                    if(screen.id === 38 || screen.id === 40){
-                        this.mainJSON.taskScienceFestival.shownScreenID = 42
+                    if(screen.id === 23 || screen.id === 26){
+                        this.mainJSON.taskScienceFestival.shownScreenID = 29
                     }
 
                     this.mainJSON.taskScienceFestival.screens.forEach(el => {

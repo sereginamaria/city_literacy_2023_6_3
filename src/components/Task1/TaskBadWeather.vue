@@ -1,6 +1,6 @@
 <template>
-    <div class="backgroundTaskScienceFestival backimp" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" :class="{background5: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 1,
-    background6: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 2, background7: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 3, background8: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 4}"
+    <div class="backgroundTaskScienceFestival backimp" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" :class="{background5: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 === 1,
+    background6: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 === 2, background7: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 === 3, background8: mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 === 4}"
     >
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Алисе? Где можно спрятаться от непогоды? Выбери один ответ.
@@ -10,7 +10,7 @@
              :style="'height: calc(100% - ' + this.height + 'px)'">
             <div class="task13">
                 <div v-for="el in mainJSON.taskScienceFestival.listOfAnswersTaskBadWeather" :key="el.id" class="task13El"
-                     :class="{choosenAnswer1: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1}"
+                     :class="{choosenAnswer1: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1}"
                      @click="chooseAnswer(el)">
                     <div>
                         {{el.name}}
@@ -25,7 +25,7 @@
                     {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
-            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 !== 'NA'">Готово</MyButton>
+            <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 !== 'NA'">Готово</MyButton>
             <MyButton class="white-buttons" disabled v-else>Готово</MyButton>
         </div>
     </div>
@@ -51,7 +51,7 @@
         methods: {
             ...mapMutations(["push_mainJSON"]),
             chooseAnswer(el) {
-                this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 = el.id
+                this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 = el.id
             },
             checkAnswer() {
                 screen.isShow = false
@@ -61,11 +61,11 @@
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 4){
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK3_1 = 1
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_1 === 4){
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK3_1 = 1
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.results.ULSCLL2_Score_SCK3_1 = 0
+                    this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK3_1 = 0
                 }
                 let t = new Date()
                 this.mainJSON.results.dataTimeLastUpdate =
@@ -122,7 +122,7 @@
         background-position: unset !important;
     }
     .background5 {
-        background: url("../../assets/TaskScienceFestivalBadWeather4.webp") !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather1.webp") !important;
         background-size: cover!important;
     }
     .background6 {
@@ -130,11 +130,11 @@
         background-size: cover!important;
     }
     .background7 {
-        background: url("../../assets/TaskScienceFestivalBadWeather1.webp") rgba(255, 255, 255, 0.01)  !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather3.webp") rgba(255, 255, 255, 0.01)  !important;
         background-size: cover!important;
     }
     .background8 {
-        background: url("../../assets/TaskScienceFestivalBadWeather3.webp") rgba(255, 255, 255, 0.01) !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather4.webp") rgba(255, 255, 255, 0.01) !important;
         background-size: cover!important;
     }
 </style>
