@@ -1,4 +1,4 @@
-const constScienceFestival = {
+const constTaskScienceFestival = {
     "instruction": "Осенью в Москве проходит акция “Фестиваль науки”. " +
         "В этот день на многих площадках города готовят специальную программу для гостей! " +
         "Ты со старшим братом Давидом отправляешься на Варварку, чтобы посетить парк и культурный центр “Зарядье”.",
@@ -350,5 +350,5 @@ const constScienceFestival = {
 }
 
 export default {
-    constScienceFestival
+    constTaskScienceFestival
 }

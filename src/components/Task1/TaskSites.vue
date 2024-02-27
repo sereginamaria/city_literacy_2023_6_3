@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Выбери ВСЕ подходящие сайты, которыми можно воспользоваться, чтобы узнать сразу обо всех интересных событиях в городе.
             </p>
@@ -18,8 +18,8 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 !== 'NA' && mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK5 !== ''">Готово</MyButton>
@@ -35,7 +35,7 @@
         name: "TaskSites",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

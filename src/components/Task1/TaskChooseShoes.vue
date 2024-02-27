@@ -1,6 +1,6 @@
 <template>
     <!--Выбор обуви-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>
                 Выбери ту полку, на которой находится подходящая обувь для тебя и для Давида. Помни, что обувь должна подходить для места, где будет много людей.
@@ -43,8 +43,8 @@
         <div class="background-text" id="background-text">
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK1_3 !== 'NA'">Готово</MyButton>
@@ -61,7 +61,7 @@
         name: "TaskChooseShoes",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

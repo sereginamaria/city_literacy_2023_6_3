@@ -1,6 +1,6 @@
 <template>
     <!--Перетаскивание вещей из сумки-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>
                 Какие вещи в рюкзаке небезопасно проносить в культурный центр? Выложи ДВЕ вещи, перетащив из рюкзака на стол.
@@ -36,8 +36,8 @@
         <div class="background-text" id="background-text">
              <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="showModal" v-if="mainJSON.taskScienceFestival.listOfElementsEnd.length !== 0">Готово</MyButton>
@@ -62,7 +62,7 @@
         name: "TaskMovingThingsFromBag",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         data() {
             return {
@@ -80,7 +80,7 @@
             draggable
         },
         computed: {
-            ...mapGetters(['mainJSON', 'constScienceFestival']),
+            ...mapGetters(['mainJSON', 'constTaskScienceFestival']),
             screenID(){
                 return this.mainJSON.taskScienceFestival.shownScreenID
             }

@@ -67,7 +67,7 @@
                     this.change = 0
                     if(this.mainJSON.taskScienceFestival.isShow && this.change === 0){
                         this.mainJSON.taskScienceFestival["isShow"] = false
-                        this.nextTask('taskLibraryNight')
+                        this.nextTask('taskScienceFestival')
                     }
                     if(this.mainJSON.taskChatWinterHolidays.isShow  && this.change === 0){
                         this.addAnswersTaskChatWinterHolidays()

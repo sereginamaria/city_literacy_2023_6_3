@@ -1,12 +1,12 @@
 <template>
     <!--Задание 6 задание-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Алисе? Выбери один вариант ответа
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskEscape" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskEscape" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -18,8 +18,8 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="nextTask(screen)" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCS4_1 !== 'NA'">Готово</MyButton>
@@ -35,7 +35,7 @@
         name: "TaskEscape",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

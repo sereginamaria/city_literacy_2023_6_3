@@ -1,6 +1,6 @@
 <template>
     <!--Задание 15 задание-->
-    <div class="backgroundTaskLibraryNight d-flex align-items-center flex-column"
+    <div class="backgroundTaskScienceFestival d-flex align-items-center flex-column"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" style="backdrop-filter: blur(5px);">
         <div class="instruction-block" id="instruction-block">
             <p>Построй план прогулки по времени. Выбери, когда лучше посетить то или иное место. Перетащи подходящую активность в нужный временной промежуток.
@@ -99,8 +99,8 @@
         <div class="background-text" id="background-text" style="background: none; justify-content: end;">
             <div class="d-flex">
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_1 !== 'NA' || mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK6_2 !== 'NA'
@@ -122,7 +122,7 @@
         },
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         data() {
             return {

@@ -1,12 +1,12 @@
 <template>
-    <div class="backgroundTaskLibraryNight"
+    <div class="backgroundTaskScienceFestival"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
     >
         <div v-if="screen.id === 4 || screen.id === 10 || screen.id === 14 || screen.id === 24 || screen.id === 27 || screen.id === 45 || screen.id === 48">
             <div class="background-text-center">
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <div class="background-text" id="background-text" style="background: none; justify-content: end;">
@@ -17,8 +17,8 @@
         <div class="background-text" id="background-text" v-else>
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="nextTask(screen)" style="height: 40px">Далее</MyButton>
@@ -39,7 +39,7 @@
         name: "TextScreen",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         data() {
             return {
@@ -59,10 +59,10 @@
 
                 if (status) {
                     this.mainJSON.listOfTasks.forEach( el => {
-                        if(el.name === 'taskLibraryNight'){
+                        if(el.name === 'taskScienceFestival'){
                             el.done = true
                             let t = new Date()
-                            this.mainJSON.results.dataTimeLastUpdate = this.mainJSON.results.dataTimeEndtaskLibraryNight =
+                            this.mainJSON.results.dataTimeLastUpdate = this.mainJSON.results.dataTimeEndtaskScienceFestival =
                                 [
                                     t.getFullYear(),
                                     ('0' + (t.getMonth() + 1)).slice(-2),

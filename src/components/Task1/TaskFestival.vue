@@ -1,12 +1,12 @@
 <template>
     <!--Задание 11 задание-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Выбери из списка фестиваль, который проходит в Москве.
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskFestival" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK4}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskFestival" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK4}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -18,8 +18,8 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK4 !== 'NA'">Готово</MyButton>
@@ -38,7 +38,7 @@
         },
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         methods: {
             ...mapMutations(["push_mainJSON"]),

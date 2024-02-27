@@ -1,12 +1,12 @@
 <template>
     <!--Задание в метро-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Что ответить Давиду? Выбери один вариант ответа.
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskMetro" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMetro" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(el)">
@@ -19,8 +19,8 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_1 !== 'NA'">Готово</MyButton>
@@ -36,7 +36,7 @@
         name: "TaskMetro",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/TaskChatWinterHolidaysBackground.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/TaskChatWinterHolidaysBackground.webp') + ')'}">
         <FormsModel v-if="this.mainJSON.forms.modelShow"/>
     </div>
 </template>

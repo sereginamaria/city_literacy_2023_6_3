@@ -1,13 +1,13 @@
 <template>
     <!--Задание 5 пункт 1-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 22">
         <div class="instruction-block" id="instruction-block">
             <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskMuseumPaintings1" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_2}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMuseumPaintings1" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_2}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(1, el)">
@@ -21,14 +21,14 @@
         </div>
     </div>
     <!--Задание 5 пункт 2-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 23">
         <div class="instruction-block" id="instruction-block">
             <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
             </p>
         </div>
         <div class="option-answers-background">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskMuseumPaintings2" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_3}"
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMuseumPaintings2" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK2_3}"
                  class="option-answers-border"
             >
                 <div @click="chooseAnswer(2, el)">
@@ -50,7 +50,7 @@
         name: "TaskMuseumPaintings",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

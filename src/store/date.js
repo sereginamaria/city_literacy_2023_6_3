@@ -109,19 +109,19 @@ const date = {
         "isShow": false,
         "shownScreenID": 0,
         "screens": [
-            {"id": 0, "isShow": true, "imgURL": "TaskScienceFestivalMovingThingsFromBagKate", "haveTask": false,
+            {"id": 0, "isShow": true, "imgURL": "TaskScienceFestivalSitesDavid", "haveTask": false,
                 "description": ''},
-            {"id": 1, "isShow": false, "imgURL": "TaskScienceFestivalMovingThingsFromBag", "haveTask": true, "taskName": "Sites",
-                "description": ''},
-
-            {"id": 2, "isShow": false, "imgURL": "TaskScienceFestivalChooseShoesKate", "haveTask": false,
-                "description": ''},
-            {"id": 3, "isShow": true, "imgURL": "TaskScienceFestivalChooseShoеs", "haveTask": true, "taskName": "WorkBook",
+            {"id": 1, "isShow": false, "imgURL": "TaskScienceFestivalSites", "haveTask": true, "taskName": "Sites",
                 "description": ''},
 
-            {"id": 4, "isShow": false, "imgURL": "TaskScienceFestivalBadWeather", "haveTask": false,
+            {"id": 2, "isShow": false, "imgURL": "TaskScienceFestivalWorkBookDavid", "haveTask": false,
                 "description": ''},
-            {"id": 5, "isShow": false, "imgURL": "TaskScienceFestivalBagWeatherKate", "haveTask": true, "taskName": "MovingThingsFromBag",
+            {"id": 3, "isShow": true, "imgURL": "TaskScienceFestivalWorkBook", "haveTask": true, "taskName": "WorkBook",
+                "description": ''},
+
+            {"id": 4, "isShow": false, "imgURL": "TaskScienceFestivalMovingThingsFromBagDavid", "haveTask": false,
+                "description": ''},
+            {"id": 5, "isShow": false, "imgURL": "TaskScienceFestivalMovingThingsFromBag", "haveTask": true, "taskName": "MovingThingsFromBag",
                 "description": ''},
 
             {"id": 6, "isShow": false, "imgURL": "TaskScienceFestivalBadWeather0", "haveTask": false,

@@ -1,6 +1,6 @@
 <template>
     <!--Задание рабочая тетрадь-->
-    <div class="backgroundTaskLibraryNight" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
+    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
             <p>Заполни пропуски в тексте.
             </p>
@@ -68,7 +68,7 @@
 
         <!--Первый вопрос-->
         <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_14Show">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook1" :key="el.id">
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskWorkBook1" :key="el.id">
                 <div class="d-flex mt-2" @click="chooseWorkBookEl(1, 14, el)"
                      data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ1" aria-expanded="false" aria-controls="collapseWorkBookQ1"
                 >
@@ -83,7 +83,7 @@
 
         <!--Второй вопрос-->
         <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_15Show">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook2" :key="el.id">
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskWorkBook2" :key="el.id">
                 <div class="d-flex mt-2 align-items-center" @click="chooseWorkBookEl(2, 15, el)"
                      data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ2" aria-expanded="false" aria-controls="collapseWorkBookQ2"
                 >
@@ -99,7 +99,7 @@
 
         <!--Третий вопрос-->
         <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_16Show">
-            <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook3" :key="el.id">
+            <div v-for="el in constTaskScienceFestival.listOfAnswersTaskWorkBook3" :key="el.id">
                 <div class="d-flex mt-2 align-items-center" @click="chooseWorkBookEl(3, 16, el)"
                      data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ3" aria-expanded="false" aria-controls="collapseWorkBookQ3"
                 >
@@ -117,7 +117,7 @@
         <div class="background-task2" v-if="mainJSON.taskScienceFestival.modularTask1_17Show">
             <img src="../../assets/Workbook8.webp" alt="" style="width: 90%">
             <div style="background: #fff; border: 1px solid #54bedf;" class="mt-2">
-                <div v-for="el in constScienceFestival.listOfAnswersTaskWorkBook4" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_4}"
+                <div v-for="el in constTaskScienceFestival.listOfAnswersTaskWorkBook4" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL2_Log_LLK1_4}"
                      class="option-answers-border"
                 >
                     <div @click="chooseAnswer(el)"
@@ -148,7 +148,7 @@
         name: "TaskWorkBook",
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

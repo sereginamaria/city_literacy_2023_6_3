@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskLibraryNight d-flex align-items-center flex-column"
+    <div class="backgroundTaskScienceFestival d-flex align-items-center flex-column"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" style="backdrop-filter: blur(5px);">
         <div class="instruction-block" id="instruction-block">
             <p>Перемести предупреждающие знаки под соответствующие подписи.
@@ -90,8 +90,8 @@
                  <div class="d-flex">
 
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="this.mainJSON.taskScienceFestival.listOfAnswersTaskWarningSigns_1.length !== 0 ||
@@ -117,7 +117,7 @@
         },
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),

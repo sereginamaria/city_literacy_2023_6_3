@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskLibraryNight backimp" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" :class="{background5: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 1,
+    <div class="backgroundTaskScienceFestival backimp" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}" :class="{background5: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 1,
     background6: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 2, background7: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 3, background8: mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 === 4}"
     >
         <div class="instruction-block" id="instruction-block">
@@ -21,8 +21,8 @@
         <div class="background-text" id="background-text">
             <div style="width: 90%">
                 <p>
-                    <span class="name-in-dialog">{{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
-                    {{constScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
+                    <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
+                    {{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].text}}
                 </p>
             </div>
             <MyButton class="white-buttons" @click="checkAnswer" v-if="mainJSON.taskScienceFestival.results.ULSCLL2_Log_SCK3_1 !== 'NA'">Готово</MyButton>
@@ -43,7 +43,7 @@
         },
         props: {
             screen: {},
-            constScienceFestival: {}
+            constTaskScienceFestival: {}
         },
         computed: {
             ...mapGetters(['mainJSON']),
@@ -122,19 +122,19 @@
         background-position: unset !important;
     }
     .background5 {
-        background: url("../../assets/TaskLibraryNightBadWeather4.webp") !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather4.webp") !important;
         background-size: cover!important;
     }
     .background6 {
-        background: url("../../assets/TaskLibraryNightBadWeather2.webp") rgba(255, 255, 255, 0.01)  !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather2.webp") rgba(255, 255, 255, 0.01)  !important;
         background-size: cover!important;
     }
     .background7 {
-        background: url("../../assets/TaskLibraryNightBadWeather1.webp") rgba(255, 255, 255, 0.01)  !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather1.webp") rgba(255, 255, 255, 0.01)  !important;
         background-size: cover!important;
     }
     .background8 {
-        background: url("../../assets/TaskLibraryNightBadWeather3.webp") rgba(255, 255, 255, 0.01) !important;
+        background: url("../../assets/TaskScienceFestivalBadWeather3.webp") rgba(255, 255, 255, 0.01) !important;
         background-size: cover!important;
     }
 </style>
