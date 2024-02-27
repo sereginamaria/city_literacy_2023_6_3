@@ -150,7 +150,7 @@
                 if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_32 === 1){
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_43 === 5{
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_43 === 5){
                     k++
                 }
                 if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_54 === 7){
