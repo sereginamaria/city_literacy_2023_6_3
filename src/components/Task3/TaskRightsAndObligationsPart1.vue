@@ -7,10 +7,10 @@
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyCleaningDay" style="justify-content: unset;">
-                <div class="d-flex justify-content-center w-100" style="height: 50%">
+            <div class="backgroundTaskBodyCleaningDay" style="justify-content: unset; width: 95%; max-height: 95%;">
+                <div class="d-flex justify-content-center w-100" style="height: 60%; margin-bottom: 20px">
                     <div class="top-block ">
-                        <div style="color: white;" class="text-bold">Права</div>
+                        <div style="color: white; margin-top: 40px; margin-bottom: 20px;" class="text-bold">Права</div>
                         <draggable
                                 @add="error(1)"
                                 class="list-group list-group-el"
@@ -37,7 +37,7 @@
                         </draggable>
                         <draggable
                                 @add="error(3)"
-                                class="list-group list-group-el"
+                                class="list-group list-group-el" style="margin-bottom: 40px;"
                                 :list="this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3"
                                 group="listOfAnswersRightsAndObligationsPart1"
                         >
@@ -49,7 +49,7 @@
                         </draggable>
                     </div>
                     <div class="top-block">
-                        <div style="color: white;" class="text-bold">Обязанности</div>
+                        <div style="color: white; margin-top: 40px; margin-bottom: 20px;" class="text-bold">Обязанности</div>
                         <draggable
                                 @add="error(4)"
                                 class="list-group list-group-el"
@@ -76,7 +76,7 @@
                         </draggable>
                         <draggable
                                 @add="error(6)"
-                                class="list-group list-group-el"
+                                class="list-group list-group-el" style="margin-bottom: 40px;"
                                 :list="this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6"
                                 group="listOfAnswersRightsAndObligationsPart1"
                         >
@@ -91,10 +91,10 @@
                 <draggable
                         class="list-group d-flex flex-row flex-wrap justify-content-center align-items-center"
                         :list="this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1"
-                        group="listOfAnswersRightsAndObligationsPart1" style="height: 30%; width: 100%"
+                        group="listOfAnswersRightsAndObligationsPart1" style="height: 30%; width: 90%"
                 >
                     <template #item="{ element }">
-                        <div class="list-of-answers">
+                        <div class="list-of-answers" style="width: 25%; flex-wrap: wrap;">
                             {{element.value}}
                         </div>
                     </template>
@@ -156,7 +156,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list1.length !== 0 ){
                     list1.push(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list1[0].id)
                     if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list1[0].id === 4 ||
-                        this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list1[0].id === 5 ||
+                        this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list1[0].id === 1 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list1[0].id === 6){
                         answers++
                     }
@@ -164,7 +164,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list2.length !== 0 ){
                     list1.push(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list2[0].id)
                     if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list2[0].id === 4 ||
-                        this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list2[0].id === 5 ||
+                        this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list2[0].id === 1 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list2[0].id === 6){
                         answers++
                     }
@@ -172,7 +172,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3.length !== 0 ){
                     list1.push(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3[0].id)
                     if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3[0].id === 4 ||
-                        this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3[0].id === 5 ||
+                        this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3[0].id === 1 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list3[0].id === 6){
                         answers++
                     }
@@ -180,7 +180,7 @@
 
                 if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list4.length !== 0 ){
                     list2.push(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list4[0].id)
-                    if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list4[0].id === 1 ||
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list4[0].id === 5 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list4[0].id === 3 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list4[0].id === 2){
                         answers++
@@ -188,7 +188,7 @@
                 }
                 if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list5.length !== 0 ){
                     list2.push(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list5[0].id)
-                    if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list5[0].id === 1 ||
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list5[0].id === 5 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list5[0].id === 3 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list5[0].id === 2){
                         answers++
@@ -196,7 +196,7 @@
                 }
                 if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6.length !== 0 ){
                     list2.push(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6[0].id)
-                    if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6[0].id === 1 ||
+                    if(this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6[0].id === 5 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6[0].id === 3 ||
                         this.mainJSON.taskCleaningDay.listOfAnswersRightsAndObligationsPart1_list6[0].id === 2){
                         answers++
@@ -243,9 +243,9 @@
 
 <style scoped>
     .top-block {
-        margin: 0 5%;
+        margin: 0 2%;
         background: #72A2AE;
-        width: 40%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;

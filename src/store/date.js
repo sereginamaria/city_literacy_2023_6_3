@@ -1047,43 +1047,44 @@ const date = {
         "listOfAnswersSocialInstitutions_list2": [],
         "listOfAnswersSocialInstitutions_list3": [],
         "listOfAnswersSocialInstitutions_list4": [],
+
         "listOfAnswersUrbanProblems": [
             {
-                "value": "Нарушается баланс флоры и фауны",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard1.png",
                 "id": 1,
             },
             {
-                "value": "Утрачивается историческое архитектурное наследие",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard2.png",
                 "id": 2,
             },
             {
-                "value": "Ухудшается качество воздуха в городе",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard3.png",
                 "id": 3,
             },
             {
-                "value": "Освобождается больше площади для застройки",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard4.png",
                 "id": 4,
             },
             {
-                "value": "Районы новой застройки привлекают больше туристов",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard5.png",
                 "id": 5,
             },
             {
-                "value": "Почва становятся более пригодной для посадки цветов",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard6.png",
                 "id": 6,
             },
             {
-                "value": "Появляются новые методы очистки почвы",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard7.png",
                 "id": 7,
             },
             {
-                "value": "Улучшается микроклимат города",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard8.png",
                 "id": 8,
             },
             {
-                "value": "Городской воздух насыщается кислородом",
+                "src": "TaskCleaningDayTaskUrbanProblemsCard9.png",
                 "id": 9,
-            }
+            },
         ],
         "listOfAnswersUrbanProblems_list1": [],
         "listOfAnswersUrbanProblems_list2": [],

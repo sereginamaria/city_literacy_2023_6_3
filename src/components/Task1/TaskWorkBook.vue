@@ -49,7 +49,7 @@
                         </p>
                     </div>
                 </div>
-                В нём находится национальный мемориал воинской славы –
+                В нем находится национальный мемориал воинской славы –
                 <span data-bs-toggle="collapse" data-bs-target="#collapseWorkBookQ4" aria-expanded="false" aria-controls="collapseWorkBookQ4"
                       @click="openWorkBookQ(17)" style="text-decoration: underline; font-size: 18px" :class="{colorAnswers: this.mainJSON.taskScienceFestival.ULSCLL3_Log_LLK1_4 === 'NA'}"
                 >{{this.mainJSON.taskScienceFestival.ULSCLL3_Log_LLK1_4 !== "NA" ? mainJSON.taskScienceFestival.ULSCLL3_Log_LLK1_4 : "_______"}}</span>.

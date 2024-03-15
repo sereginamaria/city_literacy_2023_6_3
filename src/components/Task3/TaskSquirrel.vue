@@ -2,7 +2,7 @@
     <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Ответь на вопрос Кати. Выбери один вариант ответа.
+            <p>Ответь, чем можно кормить белку. Выбери один вариант ответа.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"

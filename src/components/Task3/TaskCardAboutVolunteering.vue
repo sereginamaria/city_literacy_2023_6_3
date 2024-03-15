@@ -2,7 +2,7 @@
     <div class="backgroundTaskCleaningDay"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Отметь в таблице какая информация верная, а какая–нет.
+            <p>Отметь в таблице, какая информация о волонтерстве верная, а какая – нет.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"

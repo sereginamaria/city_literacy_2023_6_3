@@ -187,7 +187,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.length !== 0){
                     this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.forEach(elId => {
                         listOfAnswers.push(elId.id)
-                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.length === 1 && elId.id === 1){
+                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.length === 1 && elId.id === 3){
                             answers++
                         }
                         if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list1.length > 1 && elId.id === 1){
@@ -200,7 +200,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.length !== 0){
                     this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.forEach(elId => {
                         listOfAnswers.push(elId.id)
-                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.length === 1 && elId.id === 2){
+                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.length === 1 && elId.id === 4){
                             answers++
                         }
                         if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list2.length > 1 && elId.id === 2){
@@ -213,7 +213,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.length !== 0){
                     this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.forEach(elId => {
                         listOfAnswers.push(elId.id)
-                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.length === 1 && elId.id === 3){
+                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.length === 1 && elId.id === 2){
                             answers++
                         }
                         if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list3.length > 1 && elId.id === 3){
@@ -226,7 +226,7 @@
                 if(this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.length !== 0){
                     this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.forEach(elId => {
                         listOfAnswers.push(elId.id)
-                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.length === 1 && elId.id === 4){
+                        if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.length === 1 && elId.id === 1){
                             answers++
                         }
                         if (this.mainJSON.taskCleaningDay.listOfAnswersSortingGarbage_list4.length > 1 && elId.id === 4){

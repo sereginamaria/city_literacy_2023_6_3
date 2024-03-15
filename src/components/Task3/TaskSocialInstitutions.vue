@@ -7,9 +7,9 @@
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyCleaningDay flex-row">
-                <div class="d-flex justify-content-center flex-column" style="width: 45%; background: #72A2AE;">
-                    <div class="d-flex">
+            <div class="backgroundTaskBodyCleaningDay flex-row" style="width: 95%; height: 95%;">
+                <div class="d-flex justify-content-center flex-column" style="padding: 1%; width: 50%; background: #72A2AE;">
+                    <div class="d-flex" >
                         <div style="width: 20%" class="d-flex justify-content-center align-items-center">
                             <img src="../../assets/TaskCleaningDaySocialInstitutions1.png" alt="" style="width: 100%">
                         </div>
@@ -29,7 +29,7 @@
                             </draggable>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex" >
                         <div style="width: 20%" class="d-flex justify-content-center align-items-center">
                             <img src="../../assets/TaskCleaningDaySocialInstitutions2.png" alt="" style="width: 100%">
                         </div>
@@ -49,7 +49,7 @@
                             </draggable>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex" >
                         <div style="width: 20%" class="d-flex justify-content-center align-items-center">
                             <img src="../../assets/TaskCleaningDaySocialInstitutions3.png" alt="" style="width: 100%">
                         </div>
@@ -69,7 +69,7 @@
                             </draggable>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex" >
                         <div style="width: 20%" class="d-flex justify-content-center align-items-center">
                             <img src="../../assets/TaskCleaningDaySocialInstitutions4.png" alt="" style="width: 100%">
                         </div>
@@ -94,10 +94,10 @@
                 <draggable
                         class="list-group d-flex flex-column justify-content-center align-items-center"
                         :list="this.mainJSON.taskCleaningDay.listOfAnswersSocialInstitutions"
-                        group="listOfAnswersSocialInstitutions" style="width: 45%"
+                        group="listOfAnswersSocialInstitutions" style="width: 45%; height: 100%;  padding: 20px; justify-content: space-between !important;"
                 >
                     <template #item="{ element }">
-                        <div class="list-of-answers" style="width: unset">
+                        <div class="list-of-answers" style="width: 100%; height: 12%;">
                             {{element.value}}
                         </div>
                     </template>

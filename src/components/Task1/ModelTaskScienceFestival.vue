@@ -134,7 +134,9 @@ export default {
 }
 
 .background-text-center p{
+    text-align: center;
     font-weight: bold;
+    font-style: italic;
     font-size: 26px;
     color: #333333;
 }

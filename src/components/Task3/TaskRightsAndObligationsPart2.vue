@@ -1,7 +1,7 @@
 <template>
     <div class="backgroundTaskCleaningDay" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block">
-            <p>Что ответить Максу? Выбери один вариант ответа.
+            <p>Что ответить? Выбери один вариант ответа.
             </p>
         </div>
         <div class="d-flex justify-content-center align-items-center w-100"
@@ -54,8 +54,8 @@ export default {
         },
         checkAnswer() {
 
-                screen.isShow = false
-            this.mainJSON.taskCleaningDay.shownScreenID++
+            screen.isShow = false
+            // this.mainJSON.taskCleaningDay.shownScreenID++
                 if(this.mainJSON.taskCleaningDay.results.ULSE3_Log_SEK3 === 2){
                     this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3 = 1
                     this.mainJSON.taskCleaningDay.shownScreenID++
