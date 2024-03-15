@@ -8,7 +8,7 @@
         </div>
         <div class="d-flex justify-content-center align-items-center w-100 flex-column"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyLibraryNight">
+            <div class="backgroundTaskBodyScienceFestival">
                     <div class="d-flex">
                         <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
                             <img src="../../assets/Task10Element1.webp" alt="" style="width: calc(100%/1.2);">
@@ -124,7 +124,7 @@
                         el.isShow = true
                     }
                 })
-                if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].id === 4 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].id === 1 &&
+                if(this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_1[0].id === 1 && this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_2[0].id === 4 &&
                     this.mainJSON.taskScienceFestival.listOfAnswersTaskAttractions_3[0].id === 6){
                     this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK2_1 = 1
                 }

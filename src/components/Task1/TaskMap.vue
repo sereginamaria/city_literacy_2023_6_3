@@ -90,7 +90,7 @@
 
                 let maxScore = 0
                 this.mainJSON.taskScienceFestival.listOfAnswersTask9.forEach( el => {
-                    if(el === "Река Дон" || el === "Парк 'Приокский'"){
+                    if(el === "Парк Рускеала" || el === "Река Волга"){
                         maxScore++
                     }
                 })

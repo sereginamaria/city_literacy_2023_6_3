@@ -2,7 +2,7 @@
     <div class="backgroundTaskScienceFestival"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
     >
-        <div v-if="screen.id === 8 || screen.id === 12 || screen.id === 20 || screen.id === 29 || screen.id === 32 || screen.id === 43 || screen.id === 50 || screen.id === 54">
+        <div v-if="screen.id === 8 || screen.id === 12 || screen.id === 20 || screen.id === 29 || screen.id === 32 || screen.id === 44 || screen.id === 51 || screen.id === 55">
             <div class="background-text-center">
                 <p>
                     <span class="name-in-dialog">{{constTaskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].name}}</span>
@@ -124,7 +124,7 @@
                 })
             },
             nextTask(screen){
-                if(screen.id === 61){
+                if(screen.id === 62){
                     this.modalVisible = true
                     this.modalButtons = [
                         {value: "Хорошо", status: true}
@@ -133,11 +133,14 @@
                 }
                 else {
                     screen.isShow = false
-                    if(screen.id !== 23 || screen.id !== 26 || screen.id !== 36) {
+                    if(screen.id !== 23 || screen.id !== 26 || screen.id !== 36 || screen.id !== 38) {
                         this.mainJSON.taskScienceFestival.shownScreenID++
                     }
                     if(screen.id === 36 ){
                         this.mainJSON.taskScienceFestival.shownScreenID = 39
+                    }
+                    if(screen.id === 38 ){
+                        this.mainJSON.taskScienceFestival.shownScreenID = 40
                     }
                     if(screen.id === 23 || screen.id === 26){
                         this.mainJSON.taskScienceFestival.shownScreenID = 29

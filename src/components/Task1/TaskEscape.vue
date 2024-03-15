@@ -46,13 +46,13 @@
                 screen.isShow = false
 
                 if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 3 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 4){
-                    this.mainJSON.taskScienceFestival.shownScreenID++
+                    this.mainJSON.taskScienceFestival.shownScreenID+=2
                 }
                 if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 1){
                     this.mainJSON.taskScienceFestival.shownScreenID+=5
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 2){
-                    this.mainJSON.taskScienceFestival.shownScreenID+=2
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 3){
+                    this.mainJSON.taskScienceFestival.shownScreenID++
                 }
 
                 this.mainJSON.taskScienceFestival.screens.forEach(el => {

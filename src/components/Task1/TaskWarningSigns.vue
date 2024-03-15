@@ -7,7 +7,7 @@
         </div>
         <div class="d-flex justify-content-center align-items-center w-100 flex-column"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyLibraryNight justify-content-between" style="padding: 2%; height: 85%">
+            <div class="backgroundTaskBodyScienceFestival justify-content-between" style="padding: 2%; height: 85%">
                     <div class="d-flex" style="height: 35%">
                         <div class="task14El">
                             <div class="task14El1">Опасность падения груза</div>
@@ -26,7 +26,7 @@
                             </draggable>
                         </div>
                         <div class="task14El">
-                            <div class="task14El1">Осторожно, возможность падения с высоты!</div>
+                            <div class="task14El1">Осторожно, скользко!</div>
                             <draggable
                                 @add="error(2)"
                                 class="list-group task14Triangle"
@@ -42,7 +42,7 @@
                             </draggable>
                         </div>
                         <div class="task14El">
-                            <div class="task14El1">Осторожно, пожароопасно!</div>
+                            <div class="task14El1">Опасность поражения электрическим током</div>
                             <draggable
                                 @add="error(3)"
                                 class="list-group task14Triangle"
@@ -147,13 +147,13 @@
                 if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_2 === 6){
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_32 === 1){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_3 === 1){
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_43 === 5){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_4 === 5){
                     k++
                 }
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_54 === 7){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK3_5 === 7){
                     k++
                 }
                 if(k === 4){

@@ -43,9 +43,9 @@ const date = {
 
             //Warning Signs
             "ULSCLL3_Log_SCK3_2": "NA",
-            "ULSCLL3_Log_SCK3_32": "NA",
-            "ULSCLL3_Log_SCK3_43": "NA",
-            "ULSCLL3_Log_SCK3_54": "NA",
+            "ULSCLL3_Log_SCK3_3": "NA",
+            "ULSCLL3_Log_SCK3_4": "NA",
+            "ULSCLL3_Log_SCK3_5": "NA",
             "ULSCLL3_Score_SCK3_2": "NA",
 
             //Metro
@@ -198,57 +198,59 @@ const date = {
                 "description": ''},
             {"id": 39, "isShow": false, "imgURL": "TaskScienceFestivalHooligans2", "haveTask": true, "taskName": "Hooligans2",
                 "description": ''},
-
-
-            {"id": 40, "isShow": false, "imgURL": "TaskScienceFestivalMapDavid", "haveTask": false,
-                "description": ''},
-            {"id": 41, "isShow": false, "imgURL": "TaskScienceFestivalMapAlice", "haveTask": false,
-                "description": ''},
-            {"id": 42, "isShow": false, "imgURL": "TaskScienceFestivalMap", "haveTask": true, "taskName": "Map",
+            {"id": 40, "isShow": false, "imgURL": "TaskScienceFestivalHooligans2", "haveTask": true, "taskName": "Hooligans2",
                 "description": ''},
 
-            {"id": 43, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsBackground", "haveTask": false,
+
+            {"id": 41, "isShow": false, "imgURL": "TaskScienceFestivalMapDavid", "haveTask": false,
                 "description": ''},
-            {"id": 44, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsALice", "haveTask": false,
+            {"id": 42, "isShow": false, "imgURL": "TaskScienceFestivalMapAlice", "haveTask": false,
                 "description": ''},
-            {"id": 45, "isShow": false, "imgURL": "TaskScienceFestivalAttractions", "haveTask": true, "taskName": "Attractions",
+            {"id": 43, "isShow": false, "imgURL": "TaskScienceFestivalMap", "haveTask": true, "taskName": "Map",
                 "description": ''},
 
-            {"id": 46, "isShow": false, "imgURL": "TaskScienceFestivalFestivalAlice", "haveTask": false,
+            {"id": 44, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsBackground", "haveTask": false,
                 "description": ''},
-            {"id": 47, "isShow": false, "imgURL": "TaskScienceFestivalFestivalDavid", "haveTask": false,
+            {"id": 45, "isShow": false, "imgURL": "TaskScienceFestivalAttractionsALice", "haveTask": false,
                 "description": ''},
-            {"id": 48, "isShow": false, "imgURL": "TaskScienceFestivalFestival", "haveTask": true, "taskName": "Festival",
-                "description": ''},
-
-            {"id": 49, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherAlice1", "haveTask": false,
-                "description": ''},
-            {"id": 50, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherBackground", "haveTask": false,
-                "description": ''},
-            {"id": 51, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherDavid", "haveTask": false,
-                "description": ''},
-            {"id": 52, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherAlice2", "haveTask": false,
-                "description": ''},
-            {"id": 53, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherBackground", "haveTask": true, "taskName": "BadWeather",
+            {"id": 46, "isShow": false, "imgURL": "TaskScienceFestivalAttractions", "haveTask": true, "taskName": "Attractions",
                 "description": ''},
 
-            {"id": 54, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsBackground", "haveTask": false,
+            {"id": 47, "isShow": false, "imgURL": "TaskScienceFestivalFestivalAlice", "haveTask": false,
                 "description": ''},
-            {"id": 55, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsAlice", "haveTask": false,
+            {"id": 48, "isShow": false, "imgURL": "TaskScienceFestivalFestivalDavid", "haveTask": false,
                 "description": ''},
-            {"id": 56, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsDavid", "haveTask": false,
-                "description": ''},
-            {"id": 57, "isShow": false, "imgURL": "TaskScienceFestivalWarningSigns", "haveTask": true, "taskName": "WarningSigns",
+            {"id": 49, "isShow": false, "imgURL": "TaskScienceFestivalFestival", "haveTask": true, "taskName": "Festival",
                 "description": ''},
 
-            {"id": 58, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastAlice", "haveTask": false,
+            {"id": 50, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherAlice1", "haveTask": false,
                 "description": ''},
-            {"id": 59, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastDavid", "haveTask": false,
+            {"id": 51, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherBackground", "haveTask": false,
                 "description": ''},
-            {"id": 60, "isShow": false, "imgURL": "TaskScienceFestivalWarningSigns", "haveTask": true, "taskName": "WeatherForecast",
+            {"id": 52, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherDavid", "haveTask": false,
+                "description": ''},
+            {"id": 53, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherAlice2", "haveTask": false,
+                "description": ''},
+            {"id": 54, "isShow": false, "imgURL": "TaskScienceFestivalBadWeatherBackground", "haveTask": true, "taskName": "BadWeather",
                 "description": ''},
 
-            {"id": 61, "isShow": false, "imgURL": "TaskScienceFestivalEnd", "haveTask": false,
+            {"id": 55, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsBackground", "haveTask": false,
+                "description": ''},
+            {"id": 56, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsAlice", "haveTask": false,
+                "description": ''},
+            {"id": 57, "isShow": false, "imgURL": "TaskScienceFestivalWarningSignsDavid", "haveTask": false,
+                "description": ''},
+            {"id": 58, "isShow": false, "imgURL": "TaskScienceFestivalWarningSigns", "haveTask": true, "taskName": "WarningSigns",
+                "description": ''},
+
+            {"id": 59, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastAlice", "haveTask": false,
+                "description": ''},
+            {"id": 60, "isShow": false, "imgURL": "TaskScienceFestivalWeatherForecastDavid", "haveTask": false,
+                "description": ''},
+            {"id": 61, "isShow": false, "imgURL": "TaskScienceFestivalWarningSigns", "haveTask": true, "taskName": "WeatherForecast",
+                "description": ''},
+
+            {"id": 62, "isShow": false, "imgURL": "TaskScienceFestivalEnd", "haveTask": false,
                 "description": ''},
 
 
@@ -259,8 +261,8 @@ const date = {
                 "src": "TaskScienceFestivalMovingThingsFromBagWetWipes.png",
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagWetWipes_dop.png",
                 "id": 2,
-                "style": "width: 10%; position: absolute; bottom: 10%; left: 45%",
-                "style_dop": "width: 20%; position: absolute; bottom: 5%; left: 0",
+                "style": "width: 30%; position: absolute; bottom: 10%; left: 40%; z-index: 9",
+                "style_dop": "width: 30%; position: absolute; bottom: 5%; left: 0; z-index: 9",
                 "toolTip": "наушникки"
             },
             {
@@ -276,7 +278,7 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagCharger.png",
                 "id": 3,
                 "style": "width: 23%; position: absolute; bottom: 8%; left: 20%",
-                "style_dop": "20%; position: absolute; bottom: 3%; left: 58%; z-index: 99",
+                "style_dop": "width: 25%; position: absolute; bottom: 3%; left: 58%; z-index: 9",
                 "toolTip": "носовой платок"
             },
             {
@@ -291,8 +293,8 @@ const date = {
                 "src": "TaskScienceFestivalMovingThingsFromBagPencil.png",
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagPencil_dop.png",
                 "id": 6,
-                "style": "width: 30%; position: absolute; bottom: 48%; left: 40%",
-                "style_dop": "width: 30%; position: absolute; bottom: 0; left: 25%",
+                "style": "width: 20%; position: absolute; bottom: 40%; left: 20%",
+                "style_dop": "width: 35%; position: absolute; bottom: 0; left: 15%",
                 "toolTip": "пенал"
             },
             {
@@ -300,7 +302,7 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagStationeryKnife_dop.png",
                 "id": 1,
                 "style": "width: 15%; position: absolute; bottom: 51%; left: 55%",
-                "style_dop": "width: 22%; position: absolute; bottom: 5%; left: 30%",
+                "style_dop": "width: 15%; transform: rotate(-90deg); position: absolute; bottom: 0; left: 60%; z-index: 99",
                 "toolTip": "ножницы"
             }
         ],
@@ -331,8 +333,8 @@ const date = {
                 "src": "TaskScienceFestivalMapAlexGarden.png",
                 "name": "Александровский Сад",
                 "id": 4,
-                "choose": null,
-                "style": "width: 6.5%; position: absolute; bottom: calc(100%/1.95); left: calc(100%/2.1)"
+                "choose": false,
+                "style": "width: 6.5%; position: absolute; bottom: 40%; left: 42%"
             },
             // {
             //     "src": "TaskScienceFestivalMapKremlin.png",
@@ -346,35 +348,35 @@ const date = {
                 "name": "Патриаршие пруды",
                 "id": 6,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: calc(100%/1.65); left: calc(100%/3)"
+                "style": "width: 6.5%; position: absolute; bottom: 50%; left: 35%"
             },
             {
                 "src": "TaskScienceFestivalMapVolgaRiver.png",
                 "name": "Река Волга",
                 "id": 7,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: calc(100%/7); left: 20%"
+                "style": "width: 6.5%; position: absolute; bottom: 30%; left: 25%"
             },
             {
                 "src": "TaskScienceFestivalMapYauzaRiver.png",
                 "name": "Река Яуза",
                 "id": 2,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 42%; left: calc(100%/1.4)"
+                "style": "width: 6.5%; position: absolute; bottom: 42%; left: 75%"
             },
             {
                 "src": "TaskScienceFestivalMapParkChistieLakes.png",
                 "name": "Чистые пруды",
                 "id": 5,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: calc(100%/1.8); left: calc(100%/1.7)"
+                "style": "width: 6.5%; position: absolute; bottom: 45%; left: 60%"
             },
             {
                 "src": "TaskScienceFestivalMapParkGorkiy.png",
                 "name": "Парк Горького",
                 "id": 3,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: calc(100%/4.7); left: calc(100%/2.4)"
+                "style": "width: 6.5%; position: absolute; bottom: 8%; left: 40%"
             },
             {
                 "src": "TaskScienceFestivalMapMoscowRiver.png",
@@ -433,7 +435,7 @@ const date = {
             },
             {
                 "name": "Выставочные залы Москвы",
-                "link": "vzmoscow.ru",
+                "link": "https://vzmoscow.ru/",
                 "id": 2,
                 "choose": false,
             },

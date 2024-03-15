@@ -95,13 +95,13 @@ export default {
     height: calc(100vh - 140px);
     backdrop-filter: blur(5px);
     background-size: cover !important;
-    /*background-position: center !important;*/
-    background-position: 0 5% !important;
+    background-position: center !important;
+    /*background-position: 0 5% !important;*/
 }
 
-.backgroundTaskBodyLibraryNight {
-    background: #FFFFFF;
-    border: 1px solid #54BEDF;
+.backgroundTaskBodyScienceFestival {
+    /*background: #FFFFFF;*/
+    /*border: 1px solid #54BEDF;*/
     width: 85%;
     max-height: 85%;
     height: max-content;
@@ -110,7 +110,7 @@ export default {
     align-items: center;
     justify-content: center;
     padding: 3%;
-    backdrop-filter: blur(5px);
+    /*backdrop-filter: blur(5px);*/
 }
 
 .background-text {

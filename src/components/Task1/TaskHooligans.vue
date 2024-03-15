@@ -29,7 +29,8 @@
     </div>
     <!--Задание 7 задание 2-->
     <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
-         v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 39">
+         v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 39 ||
+                mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 40">
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Алисе? Выбери один вариант ответа.
             </p>
@@ -85,7 +86,7 @@
                     this.mainJSON.taskScienceFestival.shownScreenID++
                 }
                 else {
-                    this.mainJSON.taskScienceFestival.shownScreenID+=2
+                    this.mainJSON.taskScienceFestival.shownScreenID+=3
                 }
                 this.mainJSON.taskScienceFestival.screens.forEach(el => {
                     if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
@@ -95,7 +96,13 @@
             },
             checkAnswer(){
                 screen.isShow = false
-                this.mainJSON.taskScienceFestival.shownScreenID++
+
+                if (this.mainJSON.taskScienceFestival.shownScreenID === 39){
+                    this.mainJSON.taskScienceFestival.shownScreenID+=2
+                }
+                else{
+                    this.mainJSON.taskScienceFestival.shownScreenID++
+                }
                 this.mainJSON.taskScienceFestival.screens.forEach(el => {
                     if (el.id === this.mainJSON.taskScienceFestival.shownScreenID) {
                         el.isShow = true

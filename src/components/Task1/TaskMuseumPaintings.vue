@@ -6,7 +6,7 @@
             <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
             </p>
         </div>
-        <div class="option-answers-background">
+        <div class="option-answers-background" style="bottom: 10%; left: 35%">
             <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMuseumPaintings1" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK2_2}"
                  class="option-answers-border"
             >
@@ -27,7 +27,7 @@
             <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
             </p>
         </div>
-        <div class="option-answers-background">
+        <div class="option-answers-background" style="bottom: 10%; left: 35%">
             <div v-for="el in constTaskScienceFestival.listOfAnswersTaskMuseumPaintings2" :key="el.id" :class="{choosenAnswer: el.id === mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCK2_3}"
                  class="option-answers-border"
             >
