@@ -262,15 +262,15 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagWetWipes_dop.png",
                 "id": 2,
                 "style": "width: 30%; position: absolute; bottom: 10%; left: 40%; z-index: 9",
-                "style_dop": "width: 30%; position: absolute; bottom: 5%; left: 0; z-index: 9",
-                "toolTip": "наушникки"
+                "style_dop": "width: 30%; position: absolute; bottom: 0%; left: 0; z-index: 9",
+                "toolTip": "наушники"
             },
             {
                 "src": "TaskScienceFestivalMovingThingsFromBagUmbrella.png",
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagUmbrella.png",
                 "id": 7,
                 "style": "width: 25%; position: absolute; bottom: 3%; left: 80%",
-                "style_dop": "width: 25%; position: absolute; bottom: 0; left: 80%",
+                "style_dop": "width: 25%; position: absolute; bottom: 0; left: 100%",
                 "toolTip": "зонт-трость"
             },
             {
@@ -278,7 +278,7 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagCharger.png",
                 "id": 3,
                 "style": "width: 23%; position: absolute; bottom: 8%; left: 20%",
-                "style_dop": "width: 25%; position: absolute; bottom: 3%; left: 58%; z-index: 9",
+                "style_dop": "width: 25%; position: absolute; bottom: 0%; left: 75%; z-index: 9",
                 "toolTip": "носовой платок"
             },
             {
@@ -286,7 +286,7 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagNotebook_dop.png",
                 "id": 4,
                 "style": "width: 25%; position: absolute; bottom: 3%; left: 53%",
-                "style_dop": "width: 35%; position: absolute; bottom: 0; left: 50%",
+                "style_dop": "width: 35%; position: absolute; bottom: 0; left: 70%",
                 "toolTip": "школьный дневник"
             },
             {
@@ -294,7 +294,7 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagPencil_dop.png",
                 "id": 6,
                 "style": "width: 20%; position: absolute; bottom: 40%; left: 20%",
-                "style_dop": "width: 35%; position: absolute; bottom: 0; left: 15%",
+                "style_dop": "width: 35%; position: absolute; bottom: 0; left: 33%",
                 "toolTip": "пенал"
             },
             {
@@ -302,7 +302,7 @@ const date = {
                 "src_dop": "TaskScienceFestivalMovingThingsFromBagStationeryKnife_dop.png",
                 "id": 1,
                 "style": "width: 15%; position: absolute; bottom: 51%; left: 55%",
-                "style_dop": "width: 15%; transform: rotate(-90deg); position: absolute; bottom: 0; left: 60%; z-index: 99",
+                "style_dop": "width: 15%; transform: rotate(-90deg); position: absolute; bottom: 0; left: 75%; z-index: 99",
                 "toolTip": "ножницы"
             }
         ],
@@ -327,49 +327,49 @@ const date = {
                 "name": "Парк Рускеала",
                 "id": 8,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 50%; left: calc(100%/4)"
+                "style": "width: 6.5%; position: absolute; bottom: 60%; left: calc(100%/4)"
             },
             {
                 "src": "TaskScienceFestivalMapAlexGarden.png",
                 "name": "Александровский Сад",
                 "id": 4,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 40%; left: 42%"
+                "style": "width: 6.5%; position: absolute; bottom: 53%; left: 42%"
             },
             {
                 "src": "TaskScienceFestivalMapKremlin.png",
                 "name": "Кремль",
                 "id": 9,
                 "choose": null,
-                "style": "width: 6.5%; position: absolute; bottom: 32%; left: calc(100%/2.25)"
+                "style": "width: 6.5%; position: absolute; bottom: 42%; left: calc(100%/2.25)"
             },
             {
                 "src": "TaskScienceFestivalMapPatriarchieLakes.png",
                 "name": "Патриаршие пруды",
                 "id": 6,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 50%; left: 35%"
+                "style": "width: 6.5%; position: absolute; bottom: 60%; left: 35%"
             },
             {
                 "src": "TaskScienceFestivalMapVolgaRiver.png",
                 "name": "Река Волга",
                 "id": 7,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 30%; left: 25%"
+                "style": "width: 6.5%; position: absolute; bottom: 40%; left: 25%"
             },
             {
                 "src": "TaskScienceFestivalMapYauzaRiver.png",
                 "name": "Река Яуза",
                 "id": 2,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 42%; left: 75%"
+                "style": "width: 6.5%; position: absolute; bottom: 52%; left: 75%"
             },
             {
                 "src": "TaskScienceFestivalMapParkChistieLakes.png",
                 "name": "Чистые пруды",
                 "id": 5,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 45%; left: 60%"
+                "style": "width: 6.5%; position: absolute; bottom: 55%; left: 60%"
             },
             {
                 "src": "TaskScienceFestivalMapParkGorkiy.png",
@@ -383,7 +383,7 @@ const date = {
                 "name": "Москва Река",
                 "id": 1,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 25%; left: 60%"
+                "style": "width: 6.5%; position: absolute; bottom: 35%; left: 60%"
             },
         ],
         "listOfAnswersTask9": [],

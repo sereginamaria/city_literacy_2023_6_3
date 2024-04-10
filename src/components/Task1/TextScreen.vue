@@ -1,5 +1,6 @@
 <template>
-    <div class="backgroundTaskScienceFestival"
+    <div class="backgroundTaskScienceFestival" :class="{background_bottom: screen.id === 32 || screen.id === 33 || screen.id === 34 ||
+    screen.id === 36  || screen.id === 38 || screen.id === 39 || screen.id === 40 || screen.id === 42}"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
     >
         <div v-if="screen.id === 8 || screen.id === 12 || screen.id === 20 || screen.id === 29 || screen.id === 32 || screen.id === 44 || screen.id === 51 || screen.id === 55">
@@ -158,4 +159,7 @@
 </script>
 
 <style scoped>
+    .background_bottom {
+        background-position: bottom 20% right!important;
+    }
 </style>

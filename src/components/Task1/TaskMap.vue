@@ -125,7 +125,7 @@
 
 <style scoped>
 .background {
-    background-position: center !important;;
+    background-position: bottom 20% right!important;
 }
     .choose {
         opacity: 0.5;

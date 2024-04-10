@@ -1,6 +1,6 @@
 <template>
     <!--Задание 7 задание 1-->
-    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
+    <div class="background backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 34">
         <div class="instruction-block" id="instruction-block">
             <p>Что ответишь Алисе?
@@ -28,7 +28,7 @@
         </div>
     </div>
     <!--Задание 7 задание 2-->
-    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
+    <div class="background backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 39 ||
                 mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 40">
         <div class="instruction-block" id="instruction-block">
@@ -141,5 +141,7 @@
 </script>
 
 <style scoped>
-
+    .background {
+        background-position: bottom 20% right!important;
+    }
 </style>

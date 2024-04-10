@@ -172,7 +172,7 @@
         height: 90%;
         width: 35%;
         left: 10%;
-        bottom: 5%;
+        bottom: 0%;
         position: absolute;
     }
     .draggable-backpack-start {
