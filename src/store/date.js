@@ -336,13 +336,13 @@ const date = {
                 "choose": false,
                 "style": "width: 6.5%; position: absolute; bottom: 40%; left: 42%"
             },
-            // {
-            //     "src": "TaskScienceFestivalMapKremlin.png",
-            //     "name": "Кремль",
-            //     "id": 9,
-            //     "choose": null,
-            //     "style": "width: 6.5%; position: absolute; bottom: calc(100%/2.4); left: calc(100%/2.25)"
-            // },
+            {
+                "src": "TaskScienceFestivalMapKremlin.png",
+                "name": "Кремль",
+                "id": 9,
+                "choose": null,
+                "style": "width: 6.5%; position: absolute; bottom: 32%; left: calc(100%/2.25)"
+            },
             {
                 "src": "TaskScienceFestivalMapPatriarchieLakes.png",
                 "name": "Патриаршие пруды",
@@ -376,7 +376,7 @@ const date = {
                 "name": "Парк Горького",
                 "id": 3,
                 "choose": false,
-                "style": "width: 6.5%; position: absolute; bottom: 8%; left: 40%"
+                "style": "width: 6.5%; position: absolute; bottom: 1%; left: 40%"
             },
             {
                 "src": "TaskScienceFestivalMapMoscowRiver.png",

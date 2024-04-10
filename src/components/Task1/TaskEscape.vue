@@ -45,7 +45,7 @@
             nextTask(screen){
                 screen.isShow = false
 
-                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 3 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 4){
+                if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 2 || this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 4){
                     this.mainJSON.taskScienceFestival.shownScreenID+=2
                 }
                 if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Log_SCS4_1 === 1){

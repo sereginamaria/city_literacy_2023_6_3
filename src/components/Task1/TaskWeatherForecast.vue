@@ -8,7 +8,7 @@
         </div>
         <div class="d-flex justify-content-center align-items-center w-100 flex-column"
              :style="'height: calc(100% - ' + this.height + 'px)'">
-            <div class="backgroundTaskBodyScienceFestival" style="height: 85%">
+            <div class="backgroundTaskBodyScienceFestival" style="height: 100%; max-height: none">
                     <div class="d-flex justify-content-between" style="height: 70%; margin-bottom: 3%; width: 100%">
                         <div class="task15El">
                             <div class="d-flex justify-content-center align-items-center flex-column" style="height: 70%">
@@ -196,7 +196,7 @@
         justify-content: center;
         align-items: center;
         width: 90%;
-        height: 35%;
+        /*height: 35%;*/
         min-height: 15%;
     }
     .task15El{
