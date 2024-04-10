@@ -1,6 +1,6 @@
 <template>
     <!--Задание 5 пункт 1-->
-    <div class="backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
+    <div class="background backgroundTaskScienceFestival" :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}"
          v-if="mainJSON.taskScienceFestival.screens[this.mainJSON.taskScienceFestival.shownScreenID].id === 18">
         <div class="instruction-block" id="instruction-block">
             <p>Выбери, какие правила дорожного движения нарушаются на этой фотографии.
@@ -111,5 +111,7 @@
 </script>
 
 <style scoped>
-
+    .background{
+        background-position: 0 5% !important;
+    }
 </style>
