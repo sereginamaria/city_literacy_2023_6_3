@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid d-flex justify-content-end align-items-center footer" :class="{'justify-content-between': this.mainJSON.taskChatWinterHolidays.isShow}"
-        >
+        v-if="this.mainJSON.taskChatWinterHolidays.isShow">
         <div v-if="this.mainJSON.taskChatWinterHolidays.isShow">
             <MyButton class="ml-3 transparent-buttons"
                       data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Чат"
@@ -9,7 +9,7 @@
                 <img src="../assets/tak2-chat-icon.svg">
             </MyButton>
         </div>
-        <MyButton style="background: #F3AE4E; border-color: #F3AE4E; width: 200px" @click="showModal">Завершить</MyButton>
+<!--        <MyButton style="background: #F3AE4E; border-color: #F3AE4E; width: 200px" @click="showModal">Завершить</MyButton>-->
     </div>
 
     <MyModal v-model:show="modalVisible" v-model:buttons="modalButtons"
