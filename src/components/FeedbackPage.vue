@@ -1,41 +1,64 @@
 <template>
     <div class="dialog">
-        <div class="dialog-content">
+        <div class="dialog-content" style="box-shadow: 0 0 10px 5px gray;">
             <div class="d-flex flex-column">
-                <p>Результаты выполнения теста "Городская грамотность"</p>
+                <h2 style="text-align: center">Все задания выполнены!</h2>
+                <h3 style="text-align: center">О твоей городской грамотности</h3>
+                <p>Ты - <span style="text-decoration: underline">{{ this.finalResult }} </span>! </p>
+                <p>В тесте были задания, связанные с разными важными вопросами жизни в крупном мегаполисе.
+                  В таблице приведен твой уровень по отдельным направлениям.
+                </p>
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">Компонент</th>
-                        <th scope="col">Результат (%)</th>
+                        <th scope="col">Направление</th>
+                        <th scope="col">Процент выполнения</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Просоциальная вовлеченность</td>
+                        <td>
+                          <p>Просоциальная вовлеченность</p>
+                          <p style="color: gray; font-style: italic">(задания про твою готовность заботиться о городе, его жителях и природе)</p>
+                        </td>
                         <td>{{ this.prosocialEngagement }}</td>
                     </tr>
                     <tr>
-                        <td>Локальная грамотность</td>
-                        <td>{{this.localLiteracy}}</td>
-                    </tr>
-                    <tr>
-                        <td>Безопасность в городе</td>
+                       <td>
+                          <p>Локальная грамотность</p>
+                          <p style="color: gray; font-style: italic">(задания про историю, культуру и особенности нашего города)</p>
+                        </td>
                         <td>{{this.securityInTheCity}}</td>
                     </tr>
                     <tr>
-                        <td>Здоровый образ жизни</td>
+                       <td>
+                          <p>Безопасность в городе</p>
+                          <p style="color: gray; font-style: italic">(задания про безопасное взаимодействие с городом: с людьми и транспортом)</p>
+                        </td>
+                        <td>{{this.securityInTheCity}}</td>
+                    </tr>
+                    <tr>
+                       <td>
+                          <p>Здоровый образ жизни</p>
+                          <p style="color: gray; font-style: italic">(задания про поддержание твоего здоровьяи благополучия в городе)</p>
+                        </td>
                         <td>{{this.healthyLifestyle}}</td>
                     </tr>
                     <tr>
-                        <td>Применение цифровых технологий</td>
+                       <td>
+                          <p>Применение цифровых технологий</p>
+                          <p style="color: gray; font-style: italic">(задания про разные городские цифровые ресурсы и сервисы)</p>
+                        </td>
                         <td>{{this.applicationOfDigitalTechnologies}}</td>
                     </tr>
                     </tbody>
                 </table>
-                <p>Благодарим за участие!</p>
+                <h3 style="text-align: center">Благодарим за участие!</h3>
             </div>
-            <MyButton @click="exit">Выйти</MyButton>
+          <div style="display: flex; justify-content: center">
+             <MyButton @click="exit">Выйти</MyButton>
+          </div>
+
         </div>
     </div>
 </template>
@@ -52,6 +75,17 @@ export default {
             healthyLifestyle: 0,
             applicationOfDigitalTechnologies: 0,
             prosocialEngagement: 0,
+            securityInTheCityLevel: 0,
+            localLiteracyLevel: 0,
+            healthyLifestyleLevel: 0,
+            applicationOfDigitalTechnologiesLevel: 0,
+            prosocialEngagementLevel: 0,
+
+            countOf0Level: 0,
+            countOf1Level: 0,
+            countOf2Level: 0,
+            countOf3Level: 0,
+            finalResult: 0
         }
     },
     computed: {
@@ -60,9 +94,7 @@ export default {
     methods: {
         ...mapMutations(["push_mainJSON"]),
         exit(){
-            this.push_mainJSON({
-                push: this.mainJSON
-            })
+
 
             let d = new Date()
             this.mainJSON.results.dataTimeEnd =  this.mainJSON.results.dataTimeLastUpdate = [
@@ -78,19 +110,26 @@ export default {
             this.mainJSON.taskCleaningDay["isShow"] = false
             this.mainJSON.taskChatWinterHolidays["isShow"] = false
             this.mainJSON.taskScienceFestival["isShow"] = false
+          this.mainJSON['endTimeShow'] = false
 
             this.mainJSON['loginShow'] = true
             this.mainJSON['mainPageShow'] = false
             this.mainJSON['feedbackShow'] = false
             this.mainJSON['allDone'] = true
 
+           this.push_mainJSON({
+                push: this.mainJSON
+            })
+
             localStorage.clear()
+           window.location.reload();
 
         }
     },
     mounted(){
        /* console.log('feedback')*/
-        if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_2 === 1){
+
+       if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_2 === 1){
             this.securityInTheCity++
         }
         if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_SCK1_2 === 2){
@@ -152,7 +191,7 @@ export default {
         if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK4_1 === 1){
             this.localLiteracy++
         }
-        if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK5_1 === 1){
+         if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK5_1 === 1){
             this.localLiteracy++
         }
         if(this.mainJSON.taskScienceFestival.results.ULSCLL3_Score_LLK5_1 === 2){
@@ -162,93 +201,119 @@ export default {
             this.localLiteracy++
         }
 
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTS2_1 === 1){
+
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS2_1 === 1){
             this.applicationOfDigitalTechnologies++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTS3_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS3_1 === 1){
             this.applicationOfDigitalTechnologies++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTS1_2 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS1_2 === 1){
             this.applicationOfDigitalTechnologies++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTS3_2 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS3_2 === 1){
             this.applicationOfDigitalTechnologies++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLS3_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLS3_1 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLS5_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLS5_1 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK3_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK3_1 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK1_1 === 2){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK1_1 === 2){
             this.healthyLifestyle+=2
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK1_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK1_1 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK2_1 === 2){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK2_1 === 2){
             this.healthyLifestyle+=2
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK2_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK2_1 === 1){
             this.healthyLifestyle++
         }
 
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTS1_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS1_1 === 1){
             this.applicationOfDigitalTechnologies++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLS4_2 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLS4_2 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLS2_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLS2_1 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK2_2 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK2_2 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTS2_2 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTS2_2 === 1){
             this.applicationOfDigitalTechnologies++
         }
 
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK4_1 === 2){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK4_1 === 2){
             this.healthyLifestyle+=2
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLK4_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLK4_1 === 1){
             this.healthyLifestyle++
         }
 
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_DTK1_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_DTK1_1 === 1){
             this.applicationOfDigitalTechnologies++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLS1_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLS1_1 === 1){
             this.healthyLifestyle++
         }
-        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT2_Score_HLS4_1 === 1){
+        if(this.mainJSON.taskChatWinterHolidays.results.ULHLDT3_Score_HLS4_1 === 1){
             this.healthyLifestyle++
         }
 
 
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES1_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_2 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES4 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES1 === 1){
             this.prosocialEngagement++
         }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK2_2 === 1){
+            this.prosocialEngagement++
+        }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES2 === 1){
+            this.prosocialEngagement++
+        }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 === 1){
+            this.prosocialEngagement++
+        }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK5_1 === 1){
+            this.prosocialEngagement++
+        }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES5 === 1){
+            this.prosocialEngagement++
+        }
+
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 === 1){
+            this.prosocialEngagement++
+        }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 === 2){
+            this.prosocialEngagement+=2
+        }
+
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES5_1 === 1){
+            this.prosocialEngagement++
+        }
+
         if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_1 === 1){
             this.prosocialEngagement++
         }
         if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_1 === 2){
             this.prosocialEngagement+=2
         }
+
         if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK2_1 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK2_2 === 1){
             this.prosocialEngagement++
         }
         if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK1_1 === 1){
@@ -260,43 +325,24 @@ export default {
         if(this.mainJSON.taskCleaningDay.results.ULSE3_Score3_SEK1_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score1_SEK5_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score2_SEK5_1 === 1){
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3 === 1){
             this.prosocialEngagement++
+        }
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK4_2 === 1){
+            this.prosocialEngagement++
+        }
+
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 === 2){
+            this.prosocialEngagement+=2
         }
         if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 === 1){
             this.prosocialEngagement++
         }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK6_1 === 2){
-            this.prosocialEngagement+=2
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES1 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES2 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES3 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES4 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES5 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SEK3_3 === 2){
-            this.prosocialEngagement+=2
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES5_1 === 1){
-            this.prosocialEngagement++
-        }
-        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score_SES1_1 === 1){
+
+        if(this.mainJSON.taskCleaningDay.results.ULSE3_Score2_SEK5_1 === 1){
             this.prosocialEngagement++
         }
 
@@ -311,6 +357,121 @@ export default {
         this.localLiteracy = Math.round(this.localLiteracy/11*100)
         this.healthyLifestyle = Math.round(this.healthyLifestyle/14*100)
         this.applicationOfDigitalTechnologies = Math.round(this.applicationOfDigitalTechnologies/7*100)
+
+       // console.log(this.prosocialEngagement)
+        // console.log(this.securityInTheCity)
+        // console.log(this.localLiteracy)
+        // console.log(this.healthyLifestyle)
+        // console.log(this.applicationOfDigitalTechnologies)
+
+        if (this.prosocialEngagement < 25){
+          this.prosocialEngagementLevel = 0
+          this.countOf0Level++
+        }
+        if (this.prosocialEngagement >= 25 && this.prosocialEngagement <= 50){
+          this.prosocialEngagementLevel = 1
+          this.countOf1Level++
+        }
+        if (this.prosocialEngagement >= 51 && this.prosocialEngagement <= 75){
+          this.prosocialEngagementLevel = 2
+          this.countOf2Level++
+        }
+        if (this.prosocialEngagement > 76){
+          this.prosocialEngagementLevel = 3
+          this.countOf3Level++
+        }
+
+         if (this.securityInTheCity < 25){
+          this.securityInTheCityLevel = 0
+           this.countOf0Level++
+        }
+        if (this.securityInTheCity >= 25 && this.securityInTheCity <= 50){
+          this.securityInTheCityLevel = 1
+          this.countOf1Level++
+        }
+        if (this.securityInTheCity >= 51 && this.securityInTheCity <= 75){
+          this.securityInTheCityLevel = 2
+          this.countOf2Level++
+        }
+        if (this.securityInTheCity > 76){
+          this.securityInTheCityLevel = 3
+          this.countOf3Level++
+        }
+
+         if (this.localLiteracy < 25){
+          this.localLiteracyLevel = 0
+           this.countOf0Level++
+        }
+        if (this.localLiteracy >= 25 && this.localLiteracy <= 50){
+          this.localLiteracyLevel = 1
+          this.countOf1Level++
+        }
+        if (this.localLiteracy >= 51 && this.localLiteracy <= 75){
+          this.localLiteracyLevel = 2
+          this.countOf2Level++
+        }
+        if (this.localLiteracy > 76){
+          this.localLiteracyLevel = 3
+          this.countOf3Level++
+        }
+
+         if (this.healthyLifestyle < 25){
+          this.healthyLifestyleLevel = 0
+           this.countOf0Level++
+        }
+        if (this.healthyLifestyle >= 25 && this.healthyLifestyle <= 50){
+          this.healthyLifestyleLevel = 1
+          this.countOf1Level++
+        }
+        if (this.healthyLifestyle >= 51 && this.healthyLifestyle <= 75){
+          this.healthyLifestyleLevel = 2
+          this.countOf2Level++
+        }
+        if (this.healthyLifestyle > 76){
+          this.healthyLifestyleLevel = 3
+          this.countOf3Level++
+        }
+
+        if (this.applicationOfDigitalTechnologies < 25){
+          this.applicationOfDigitalTechnologiesLevel = 0
+          this.countOf0Level++
+        }
+        if (this.applicationOfDigitalTechnologies >= 25 && this.applicationOfDigitalTechnologies <= 50){
+          this.applicationOfDigitalTechnologiesLevel = 1
+          this.countOf1Level++
+        }
+        if (this.applicationOfDigitalTechnologies >= 51 && this.applicationOfDigitalTechnologies <= 75){
+          this.applicationOfDigitalTechnologiesLevel = 2
+          this.countOf2Level++
+        }
+        if (this.applicationOfDigitalTechnologies > 76){
+          this.applicationOfDigitalTechnologiesLevel = 3
+          this.countOf3Level++
+        }
+
+      //   console.log(this.prosocialEngagementLevel)
+      //   console.log(this.securityInTheCityLevel)
+      //   console.log(this.localLiteracyLevel)
+      //   console.log(this.healthyLifestyleLevel)
+      //   console.log(this.applicationOfDigitalTechnologiesLevel)
+      //
+      //   console.log(this.countOf0Level++)
+      // console.log(this.countOf1Level++)
+      // console.log(this.countOf2Level++)
+      // console.log(this.countOf3Level++)
+
+
+      if (this.countOf0Level >= 3 && this.countOf1Level <= 3 && this.countOf2Level <= 2 && this.countOf3Level <= 1){
+        this.finalResult = 'Начинающий пользователь города'
+      }
+      else if (this.countOf0Level <= 1 && this.countOf1Level <= 2 && this.countOf2Level <= 4 && this.countOf3Level >= 2){
+        this.finalResult = 'Продвинутый пользователь города'
+      }
+      else {
+        this.finalResult = 'Уверенный пользователь города'
+      }
+
+      // console.log(this.finalResult)
     }
 }
 </script>
@@ -318,7 +479,7 @@ export default {
 <style scoped>
 .dialog-content {
     overflow-y: scroll;
-    max-height: 80vh;
-    max-width: 80vw;
+    height: 60vh;
+    width: 60vw;
 }
 </style>

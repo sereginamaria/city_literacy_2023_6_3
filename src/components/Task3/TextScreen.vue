@@ -92,10 +92,14 @@
                                 ('0' + (t.getMinutes())).slice(-2),
                                 ('0' + t.getSeconds()).slice(-2)
                             ].join(':');
-                        this.mainJSON.forms['isShow'] = true
-                        this.mainJSON["instructionShow"] = true
-                        this.mainJSON["mainPageShow"] = false
                         this.mainJSON.taskCleaningDay["isShow"] = false
+            this.mainJSON.taskChatWinterHolidays["isShow"] = false
+            this.mainJSON.taskScienceFestival["isShow"] = false
+            this.mainJSON['feedbackShow'] = true
+                        // this.mainJSON.forms['isShow'] = true
+                        // this.mainJSON["instructionShow"] = true
+                        // this.mainJSON["mainPageShow"] = false
+                        // this.mainJSON.taskCleaningDay["isShow"] = false
                     }
                     else {
                         let randomElement = this.listOfNotDoneTasks[Math.floor(Math.random()*this.listOfNotDoneTasks.length)]
