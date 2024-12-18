@@ -478,7 +478,7 @@ export default {
 
 <style scoped>
 .dialog-content {
-    overflow-y: scroll;
+    //overflow-y: scroll;
     height: 60vh;
     width: 60vw;
 }

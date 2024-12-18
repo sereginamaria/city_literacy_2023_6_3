@@ -96,6 +96,7 @@
             this.mainJSON.taskChatWinterHolidays["isShow"] = false
             this.mainJSON.taskScienceFestival["isShow"] = false
             this.mainJSON['feedbackShow'] = true
+                      this.mainJSON["mainPageShow"] = false
                         // this.mainJSON.forms['isShow'] = true
                         // this.mainJSON["instructionShow"] = true
                         // this.mainJSON["mainPageShow"] = false

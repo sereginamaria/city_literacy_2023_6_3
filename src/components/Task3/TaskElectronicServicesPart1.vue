@@ -1,5 +1,5 @@
 <template>
-    <div class="backgroundTaskCleaningDay"
+    <div class="backgroundTaskCleaningDay d-flex align-items-center flex-column"
          :style="{ background: 'url(' + require('../../assets/' + screen.imgURL + '.webp') + ')'}">
         <div class="instruction-block" id="instruction-block" v-if="!this.showModalDialog">
             <p>
@@ -43,13 +43,16 @@
     </div>
 
     <div v-if="this.showModalDialog" class="dialog d-flex flex-column">
-        <div style="margin: auto">
+        <div style="margin: auto; align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;">
             <div class="dialog-content mb-3" style="margin: unset">
                 <div class="mb-3">
-                    Перед тобой карта важных проблем нашего города. Кликнув на объект на карте, ты увидишь описание проблемы. Укажи, можно ли решить эту проблему, отправив заявку в электронный сервис?
+                    Укажи, можно ли решить эту проблему, отправив заявку в электронный сервис?
                 </div>
             </div>
-            <div class="dialog-content" style="margin: unset">
+            <div class="dialog-content" style="margin: unset; width: max-content;">
                 <div class="mb-3">
                     <img :src=" require('../../assets/' + this.imgSrc + '.webp') " alt="" style="width: 100%">
                     <div>
