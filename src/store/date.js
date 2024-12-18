@@ -9,7 +9,8 @@ const date = {
     "feedbackShow": false,
     "allDone": false,
     "currentPushTime": 0,
-    "currentTime": 4200,
+    "currentTime": 2700,
+    "currentPauseTime": 300,
     "ret": '',
     "retPush": '',
     "retPause": '',
@@ -1159,7 +1160,7 @@ const date = {
                 "id": 3,
                 "choose": false,
             }, {
-                "name": "Нужно разговаривать спокойно и негромко.",
+                "name": "Нужно уступать места пассажирам с детьми, пожилым людям и беременным женщинам.",
                 "id": 4,
                 "choose": false,
             },

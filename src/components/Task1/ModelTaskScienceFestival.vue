@@ -92,7 +92,7 @@ export default {
 
 <style>
 .backgroundTaskScienceFestival {
-    height: calc(100vh - 140px);
+    height: calc(100vh - 70px);
     backdrop-filter: blur(5px);
     background-size: cover !important;
     background-position: center !important;
